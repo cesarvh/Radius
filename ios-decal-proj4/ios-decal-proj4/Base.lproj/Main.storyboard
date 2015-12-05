@@ -52,7 +52,7 @@
             </objects>
             <point key="canvasLocation" x="115.5" y="262.5"/>
         </scene>
-        <!--My Messages Table View Controller-->
+        <!--Messages-->
         <scene sceneID="5Ey-lU-1iz">
             <objects>
                 <tableViewController id="iJh-sn-br0" customClass="MyMessagesTableViewController" customModule="ios_decal_proj4" customModuleProvider="target" sceneMemberID="viewController">
@@ -78,13 +78,14 @@
                             <outlet property="delegate" destination="iJh-sn-br0" id="3hD-Ha-68W"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Messages" id="7yr-1p-UT0"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OTi-rM-Wij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1178.5" y="-562.5"/>
         </scene>
-        <!--Sent Messages Table View Controller-->
+        <!--Sent Messages-->
         <scene sceneID="0Jt-I8-ftK">
             <objects>
                 <tableViewController id="O0i-Eo-9v3" customClass="SentMessagesTableViewController" customModule="ios_decal_proj4" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,13 +111,14 @@
                             <outlet property="delegate" destination="O0i-Eo-9v3" id="dP7-1o-ojs"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Sent Messages" id="orZ-7x-jTb"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOB-Ra-gTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1664.5" y="-409.5"/>
         </scene>
-        <!--New Message View Controller-->
+        <!--New Message-->
         <scene sceneID="vus-G8-t1O">
             <objects>
                 <viewController id="ECW-VP-jpb" customClass="NewMessageViewController" customModule="ios_decal_proj4" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,6 +132,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="New Message" id="GkA-cp-idA"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vt-4Q-yAY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -212,7 +215,7 @@
             </objects>
             <point key="canvasLocation" x="1178.5" y="262.5"/>
         </scene>
-        <!--My Friends Table View Controller-->
+        <!--Friends-->
         <scene sceneID="NkG-xE-pxg">
             <objects>
                 <tableViewController id="P0e-x0-MMy" customClass="MyFriendsTableViewController" customModule="ios_decal_proj4" customModuleProvider="target" sceneMemberID="viewController">
@@ -238,13 +241,14 @@
                             <outlet property="delegate" destination="P0e-x0-MMy" id="yXA-hk-dqH"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Friends" id="0sV-pX-KrB"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3lF-FM-YjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="998.5" y="1300.5"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="meB-zQ-wLt">
             <objects>
                 <viewController id="4it-tz-wtE" customClass="SettingsViewController" customModule="ios_decal_proj4" customModuleProvider="target" sceneMemberID="viewController">
@@ -258,6 +262,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Settings" id="YeN-Mv-m1h"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvf-fx-uxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
