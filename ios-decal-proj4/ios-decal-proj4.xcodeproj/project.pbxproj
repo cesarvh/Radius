@@ -14,6 +14,13 @@
 		30C634061C13959C0076E57F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C634041C13959C0076E57F /* LaunchScreen.storyboard */; };
 		30C634111C13959C0076E57F /* ios_decal_proj4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634101C13959C0076E57F /* ios_decal_proj4Tests.swift */; };
 		30C6341C1C13959C0076E57F /* ios_decal_proj4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6341B1C13959C0076E57F /* ios_decal_proj4UITests.swift */; };
+		30C6342A1C139E810076E57F /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C634291C139E810076E57F /* login.png */; };
+		30C6342C1C13A3BA0076E57F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6342B1C13A3BA0076E57F /* HomeScreenViewController.swift */; };
+		30C6342E1C13A4020076E57F /* MyMessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6342D1C13A4020076E57F /* MyMessagesTableViewController.swift */; };
+		30C634301C13A47F0076E57F /* SentMessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6342F1C13A47F0076E57F /* SentMessagesTableViewController.swift */; };
+		30C634321C13A4B90076E57F /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634311C13A4B90076E57F /* NewMessageViewController.swift */; };
+		30C634341C13A4D90076E57F /* MyFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634331C13A4D90076E57F /* MyFriendsTableViewController.swift */; };
+		30C634361C13A4F10076E57F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634351C13A4F10076E57F /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		30C634171C13959C0076E57F /* ios-decal-proj4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-decal-proj4UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C6341B1C13959C0076E57F /* ios_decal_proj4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_decal_proj4UITests.swift; sourceTree = "<group>"; };
 		30C6341D1C13959C0076E57F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30C634291C139E810076E57F /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login.png; path = "ios-decal-proj4/login.png"; sourceTree = "<group>"; };
+		30C6342B1C13A3BA0076E57F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		30C6342D1C13A4020076E57F /* MyMessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMessagesTableViewController.swift; sourceTree = "<group>"; };
+		30C6342F1C13A47F0076E57F /* SentMessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMessagesTableViewController.swift; sourceTree = "<group>"; };
+		30C634311C13A4B90076E57F /* NewMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageViewController.swift; sourceTree = "<group>"; };
+		30C634331C13A4D90076E57F /* MyFriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewController.swift; sourceTree = "<group>"; };
+		30C634351C13A4F10076E57F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,7 @@
 		30C633EF1C13959C0076E57F = {
 			isa = PBXGroup;
 			children = (
+				30C634291C139E810076E57F /* login.png */,
 				30C633FA1C13959C0076E57F /* ios-decal-proj4 */,
 				30C6340F1C13959C0076E57F /* ios-decal-proj4Tests */,
 				30C6341A1C13959C0076E57F /* ios-decal-proj4UITests */,
@@ -100,6 +115,12 @@
 				30C633FB1C13959C0076E57F /* AppDelegate.swift */,
 				30C633FD1C13959C0076E57F /* ViewController.swift */,
 				30C633FF1C13959C0076E57F /* Main.storyboard */,
+				30C634351C13A4F10076E57F /* SettingsViewController.swift */,
+				30C634331C13A4D90076E57F /* MyFriendsTableViewController.swift */,
+				30C634311C13A4B90076E57F /* NewMessageViewController.swift */,
+				30C6342F1C13A47F0076E57F /* SentMessagesTableViewController.swift */,
+				30C6342D1C13A4020076E57F /* MyMessagesTableViewController.swift */,
+				30C6342B1C13A3BA0076E57F /* HomeScreenViewController.swift */,
 				30C634021C13959C0076E57F /* Assets.xcassets */,
 				30C634041C13959C0076E57F /* LaunchScreen.storyboard */,
 				30C634071C13959C0076E57F /* Info.plist */,
@@ -229,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C6342A1C139E810076E57F /* login.png in Resources */,
 				30C634061C13959C0076E57F /* LaunchScreen.storyboard in Resources */,
 				30C634031C13959C0076E57F /* Assets.xcassets in Resources */,
 				30C634011C13959C0076E57F /* Main.storyboard in Resources */,
@@ -257,7 +279,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				30C633FE1C13959C0076E57F /* ViewController.swift in Sources */,
+				30C634321C13A4B90076E57F /* NewMessageViewController.swift in Sources */,
 				30C633FC1C13959C0076E57F /* AppDelegate.swift in Sources */,
+				30C6342C1C13A3BA0076E57F /* HomeScreenViewController.swift in Sources */,
+				30C634301C13A47F0076E57F /* SentMessagesTableViewController.swift in Sources */,
+				30C634341C13A4D90076E57F /* MyFriendsTableViewController.swift in Sources */,
+				30C6342E1C13A4020076E57F /* MyMessagesTableViewController.swift in Sources */,
+				30C634361C13A4F10076E57F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +512,7 @@
 				30C634221C13959C0076E57F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30C634231C13959C0076E57F /* Build configuration list for PBXNativeTarget "ios-decal-proj4Tests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +521,7 @@
 				30C634251C13959C0076E57F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30C634261C13959C0076E57F /* Build configuration list for PBXNativeTarget "ios-decal-proj4UITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +530,7 @@
 				30C634281C13959C0076E57F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

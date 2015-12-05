@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewMessageViewController: UIViewController {
+class NewMessageViewController: UIViewController, MFMessageComposeViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,18 @@ class NewMessageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func sendMessage(sender: AnyObject) {
+        var messageVC = MFMessageComposeViewController()
+        
+        messageVC.body = "Enter a message";
+        messageVC.recipients = ["Enter tel-nr"]
+        messageVC.messageComposeDelegate = self;
+        
+        self.presentViewController(messageVC, animated: false, completion: nil)
+    }
+    
+    
     
 
     /*
