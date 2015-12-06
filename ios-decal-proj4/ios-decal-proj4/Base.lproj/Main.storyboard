@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="115.5" y="262.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Messages View Controller-->
         <scene sceneID="m61-Qk-HCV">
             <objects>
-                <viewController id="h65-KR-t4D" sceneMemberID="viewController">
+                <viewController id="h65-KR-t4D" customClass="MessagesViewController" customModule="ios_decal_proj4" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XS0-fN-ECv"/>
                         <viewControllerLayoutGuide type="bottom" id="LxR-xm-qLh"/>
@@ -70,17 +70,23 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rp9-nI-l5K">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rp9-nI-l5K">
                                 <rect key="frame" x="0.0" y="599" width="375" height="68"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="myx-Pe-bI6" firstAttribute="leading" secondItem="aAs-Wf-Wzx" secondAttribute="leadingMargin" constant="-20" id="2ku-Qx-gmQ"/>
+                            <constraint firstItem="rp9-nI-l5K" firstAttribute="leading" secondItem="aAs-Wf-Wzx" secondAttribute="leadingMargin" constant="-20" id="Jay-ur-kLJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rp9-nI-l5K" secondAttribute="trailing" constant="-20" id="Qh3-pV-SFY"/>
                             <constraint firstItem="myx-Pe-bI6" firstAttribute="top" secondItem="aAs-Wf-Wzx" secondAttribute="topMargin" id="ZvY-FH-JBb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rp9-nI-l5K" secondAttribute="trailing" constant="-20" id="ed5-6z-H9A"/>
+                            <constraint firstItem="rp9-nI-l5K" firstAttribute="leading" secondItem="aAs-Wf-Wzx" secondAttribute="leadingMargin" constant="-20" id="hUV-DL-Euz"/>
+                            <constraint firstItem="LxR-xm-qLh" firstAttribute="top" secondItem="rp9-nI-l5K" secondAttribute="bottom" id="uhp-gP-KHx"/>
+                            <constraint firstItem="LxR-xm-qLh" firstAttribute="top" secondItem="rp9-nI-l5K" secondAttribute="bottom" id="ybl-us-YdA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="myx-Pe-bI6" secondAttribute="trailing" constant="-20" id="zWE-oC-OlA"/>
                         </constraints>
                     </view>
@@ -192,6 +198,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <state key="normal" title="Messages"/>
+                                <connections>
+                                    <segue destination="h65-KR-t4D" kind="show" id="o91-Ul-TRR"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mHe-Zo-UBe">
@@ -213,6 +222,9 @@
                                     <action selector="sendMessage:" destination="p1m-tx-SOa" eventType="touchUpInside" id="QMi-H1-55d"/>
                                 </connections>
                             </button>
+                            <connections>
+                                <segue destination="ECW-VP-jpb" kind="show" id="Kwn-CU-CNk"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -222,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DX5-Lc-eMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1178.5" y="262.5"/>
+            <point key="canvasLocation" x="1204.5" y="306.5"/>
         </scene>
         <!--Friends-->
         <scene sceneID="NkG-xE-pxg">

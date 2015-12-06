@@ -16,7 +16,6 @@
 		30C6341C1C13959C0076E57F /* ios_decal_proj4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6341B1C13959C0076E57F /* ios_decal_proj4UITests.swift */; };
 		30C6342A1C139E810076E57F /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C634291C139E810076E57F /* login.png */; };
 		30C6342C1C13A3BA0076E57F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6342B1C13A3BA0076E57F /* HomeScreenViewController.swift */; };
-		30C6342E1C13A4020076E57F /* MyMessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6342D1C13A4020076E57F /* MyMessagesTableViewController.swift */; };
 		30C634301C13A47F0076E57F /* SentMessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6342F1C13A47F0076E57F /* SentMessagesTableViewController.swift */; };
 		30C634321C13A4B90076E57F /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634311C13A4B90076E57F /* NewMessageViewController.swift */; };
 		30C634341C13A4D90076E57F /* MyFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634331C13A4D90076E57F /* MyFriendsTableViewController.swift */; };
@@ -39,6 +38,7 @@
 		30C634561C13C30C0076E57F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C634551C13C30C0076E57F /* libsqlite3.tbd */; };
 		30C634581C13C3270076E57F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C634571C13C3270076E57F /* Accounts.framework */; };
 		30C6345A1C13C3310076E57F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C634591C13C3310076E57F /* Social.framework */; };
+		30C6345D1C13CCE00076E57F /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6345C1C13CCE00076E57F /* MessagesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +74,6 @@
 		30C6341D1C13959C0076E57F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30C634291C139E810076E57F /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login.png; path = "ios-decal-proj4/login.png"; sourceTree = "<group>"; };
 		30C6342B1C13A3BA0076E57F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
-		30C6342D1C13A4020076E57F /* MyMessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMessagesTableViewController.swift; sourceTree = "<group>"; };
 		30C6342F1C13A47F0076E57F /* SentMessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMessagesTableViewController.swift; sourceTree = "<group>"; };
 		30C634311C13A4B90076E57F /* NewMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageViewController.swift; sourceTree = "<group>"; };
 		30C634331C13A4D90076E57F /* MyFriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +96,7 @@
 		30C634551C13C30C0076E57F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		30C634571C13C3270076E57F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		30C634591C13C3310076E57F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		30C6345C1C13CCE00076E57F /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,11 +170,11 @@
 				30C633FB1C13959C0076E57F /* AppDelegate.swift */,
 				30C633FD1C13959C0076E57F /* ViewController.swift */,
 				30C633FF1C13959C0076E57F /* Main.storyboard */,
+				30C6345C1C13CCE00076E57F /* MessagesViewController.swift */,
 				30C634351C13A4F10076E57F /* SettingsViewController.swift */,
 				30C634331C13A4D90076E57F /* MyFriendsTableViewController.swift */,
 				30C634311C13A4B90076E57F /* NewMessageViewController.swift */,
 				30C6342F1C13A47F0076E57F /* SentMessagesTableViewController.swift */,
-				30C6342D1C13A4020076E57F /* MyMessagesTableViewController.swift */,
 				30C6342B1C13A3BA0076E57F /* HomeScreenViewController.swift */,
 				30C634021C13959C0076E57F /* Assets.xcassets */,
 				30C634041C13959C0076E57F /* LaunchScreen.storyboard */,
@@ -362,10 +362,10 @@
 				30C633FE1C13959C0076E57F /* ViewController.swift in Sources */,
 				30C634321C13A4B90076E57F /* NewMessageViewController.swift in Sources */,
 				30C633FC1C13959C0076E57F /* AppDelegate.swift in Sources */,
+				30C6345D1C13CCE00076E57F /* MessagesViewController.swift in Sources */,
 				30C6342C1C13A3BA0076E57F /* HomeScreenViewController.swift in Sources */,
 				30C634301C13A47F0076E57F /* SentMessagesTableViewController.swift in Sources */,
 				30C634341C13A4D90076E57F /* MyFriendsTableViewController.swift in Sources */,
-				30C6342E1C13A4020076E57F /* MyMessagesTableViewController.swift in Sources */,
 				30C634361C13A4F10076E57F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
