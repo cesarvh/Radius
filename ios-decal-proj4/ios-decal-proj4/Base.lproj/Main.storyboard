@@ -59,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="115.5" y="262.5"/>
+            <point key="canvasLocation" x="77.5" y="262.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Zzd-6X-TWb">
@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ay9-zY-l6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="218.5" y="1051.5"/>
+            <point key="canvasLocation" x="77.5" y="1191.5"/>
         </scene>
         <!--Messages View Controller-->
         <scene sceneID="m61-Qk-HCV">
@@ -93,16 +93,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="myx-Pe-bI6">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="602"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="myx-Pe-bI6">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MessageCell" id="IjO-Dv-gLH">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="383" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IjO-Dv-gLH" id="BKX-p4-mOK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -110,30 +110,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rp9-nI-l5K">
-                                <rect key="frame" x="0.0" y="599" width="375" height="68"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="myx-Pe-bI6" firstAttribute="leading" secondItem="aAs-Wf-Wzx" secondAttribute="leadingMargin" constant="-20" id="2ku-Qx-gmQ"/>
-                            <constraint firstItem="rp9-nI-l5K" firstAttribute="leading" secondItem="aAs-Wf-Wzx" secondAttribute="leadingMargin" constant="-20" id="Jay-ur-kLJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rp9-nI-l5K" secondAttribute="trailing" constant="-20" id="Qh3-pV-SFY"/>
                             <constraint firstItem="myx-Pe-bI6" firstAttribute="top" secondItem="aAs-Wf-Wzx" secondAttribute="topMargin" id="ZvY-FH-JBb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rp9-nI-l5K" secondAttribute="trailing" constant="-20" id="ed5-6z-H9A"/>
-                            <constraint firstItem="LxR-xm-qLh" firstAttribute="top" secondItem="myx-Pe-bI6" secondAttribute="bottom" constant="65" id="erp-dx-wTy"/>
-                            <constraint firstItem="rp9-nI-l5K" firstAttribute="leading" secondItem="aAs-Wf-Wzx" secondAttribute="leadingMargin" constant="-20" id="hUV-DL-Euz"/>
-                            <constraint firstItem="LxR-xm-qLh" firstAttribute="top" secondItem="rp9-nI-l5K" secondAttribute="bottom" id="uhp-gP-KHx"/>
-                            <constraint firstItem="LxR-xm-qLh" firstAttribute="top" secondItem="rp9-nI-l5K" secondAttribute="bottom" id="ybl-us-YdA"/>
+                            <constraint firstItem="LxR-xm-qLh" firstAttribute="top" secondItem="myx-Pe-bI6" secondAttribute="bottom" id="erp-dx-wTy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="myx-Pe-bI6" secondAttribute="trailing" constant="-20" id="zWE-oC-OlA"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="messageTableView" destination="myx-Pe-bI6" id="hzq-it-aRH"/>
+                        <outlet property="messageTextField" destination="Lra-Ju-vg7" id="q8g-yB-wbB"/>
+                        <outlet property="sendButton" destination="ndO-JU-DNv" id="EwP-qJ-bCQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4a-Pn-dqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -187,15 +178,55 @@
                     <view key="view" contentMode="scaleToFill" id="Ryd-T2-fr3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rp9-nI-l5K">
+                                <rect key="frame" x="0.0" y="411" width="379" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lra-Ju-vg7">
+                                        <rect key="frame" x="8" y="5" width="311" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndO-JU-DNv">
+                                        <rect key="frame" x="327" y="5" width="44" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="tSL-VZ-sH6"/>
+                                            <constraint firstAttribute="width" constant="44" id="xQd-VZ-t9F"/>
+                                        </constraints>
+                                        <state key="normal" title="Send"/>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Lra-Ju-vg7" firstAttribute="leading" secondItem="rp9-nI-l5K" secondAttribute="leadingMargin" id="1YX-Nw-e1f"/>
+                                    <constraint firstItem="ndO-JU-DNv" firstAttribute="leading" secondItem="Lra-Ju-vg7" secondAttribute="trailing" constant="8" id="4cn-Z5-WDJ"/>
+                                    <constraint firstItem="ndO-JU-DNv" firstAttribute="top" secondItem="Lra-Ju-vg7" secondAttribute="top" id="DWI-c7-UWp"/>
+                                    <constraint firstAttribute="trailing" secondItem="ndO-JU-DNv" secondAttribute="trailing" constant="8" id="VQT-sy-8gp"/>
+                                    <constraint firstItem="ndO-JU-DNv" firstAttribute="centerY" secondItem="rp9-nI-l5K" secondAttribute="centerY" id="atH-DP-1ER"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.66564351320266724" green="0.86480039358139038" blue="0.89500337839126587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rp9-nI-l5K" firstAttribute="top" secondItem="a4R-ua-aoR" secondAttribute="bottom" constant="347" id="Mrw-TA-lFb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rp9-nI-l5K" secondAttribute="trailing" constant="-20" id="YJJ-Qe-Y8H"/>
+                            <constraint firstItem="tsb-R9-4Zh" firstAttribute="top" secondItem="rp9-nI-l5K" secondAttribute="bottom" constant="216" id="vAv-uI-kZm"/>
+                            <constraint firstItem="rp9-nI-l5K" firstAttribute="leading" secondItem="Ryd-T2-fr3" secondAttribute="leading" id="vxD-a8-OWG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Message" id="GkA-cp-idA"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="newMessageField" destination="Lra-Ju-vg7" id="arQ-HH-4Ws"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vt-4Q-yAY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2056.5" y="312.5"/>
+            <point key="canvasLocation" x="1789.5" y="740.5"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="a5p-uc-cUE">
@@ -267,11 +298,9 @@
                                 <state key="normal" title="Send SMS"/>
                                 <connections>
                                     <action selector="sendMessage:" destination="p1m-tx-SOa" eventType="touchUpInside" id="QMi-H1-55d"/>
+                                    <segue destination="ECW-VP-jpb" kind="show" id="ozc-Ud-YgB"/>
                                 </connections>
                             </button>
-                            <connections>
-                                <segue destination="ECW-VP-jpb" kind="show" id="Kwn-CU-CNk"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

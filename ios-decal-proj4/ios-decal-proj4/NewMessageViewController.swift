@@ -11,8 +11,10 @@ import Parse
 
 class NewMessageViewController: UIViewController {
 
+    @IBOutlet weak var newMessageField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        newMessageField.becomeFirstResponder()
 
         // Do any additional setup after loading the view.
     }
