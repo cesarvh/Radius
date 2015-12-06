@@ -10,18 +10,24 @@ import UIKit
 import MessageUI
 import MapKit
 import CoreLocation
-import Parse
 
-class HomeScreenViewController: UIViewController, MFMessageComposeViewControllerDelegate{
-
+class HomeScreenViewController: UIViewController, MFMessageComposeViewControllerDelegate, MKMapViewDelegate, CLLocationManagerDelegate{
+    
     @IBOutlet weak var Map: MKMapView!
+    let locationmanager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.locationmanager.delegate = self
+        self.locationmanager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        self.locationmanager.requestWhenInUseAuthorization()
+        self.locationmanager.startUpdatingLocation()
+        self.Map.showsUserLocation = true
+        
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -38,7 +44,7 @@ class HomeScreenViewController: UIViewController, MFMessageComposeViewController
         messageVC.recipients = ["Enter tel-nr"]
         messageVC.messageComposeDelegate = self;
         
-//        self.presentViewController(messageVC, animated: false, completion: nil)
+        //        self.presentViewController(messageVC, animated: false, completion: nil)
     }
     func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result: MessageComposeResult) {
         switch (result.rawValue) {
@@ -46,7 +52,7 @@ class HomeScreenViewController: UIViewController, MFMessageComposeViewController
             print("Message was cancelled")
             self.dismissViewControllerAnimated(true, completion: nil)
         case MessageComposeResultFailed.rawValue:
-       print("Message failed")
+            print("Message failed")
             self.dismissViewControllerAnimated(true, completion: nil)
         case MessageComposeResultSent.rawValue:
             print("Message was sent")
@@ -55,15 +61,29 @@ class HomeScreenViewController: UIViewController, MFMessageComposeViewController
             break;
         }
     }
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
+    //Mark: Location Delegate Methods
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last
+        let center = CLLocationCoordinate2DMake(location!.coordinate.latitude, location!.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpanMake(1, 1))
+        self.Map.setRegion(region, animated: true)
+        self.locationmanager.stopUpdatingLocation()
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("Errors: " + error.localizedDescription)
+    }
+    
 }
