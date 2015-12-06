@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Parse 
 class MyFriendsTableViewController: UITableViewController {
 
     override func viewDidLoad() {

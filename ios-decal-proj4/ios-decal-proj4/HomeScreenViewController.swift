@@ -10,6 +10,7 @@ import UIKit
 import MessageUI
 import MapKit
 import CoreLocation
+import Parse
 
 class HomeScreenViewController: UIViewController, MFMessageComposeViewControllerDelegate{
 
