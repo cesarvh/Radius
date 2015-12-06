@@ -34,7 +34,19 @@ class MyFriendsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        let cell = self.messageTableView.dequeueReusableCellWithIdentifier("friendCell")! as UITableViewCell
+        //         customize
+        cell.textLabel?.text = self.messagesArray[indexPath.row]
+        //        background: rgb(157, 212, 222);
+        
+        self.view.backgroundColor = UIColor(red:0.62, green:0.83, blue:0.87, alpha:1.0)
+        cell.backgroundColor = UIColor(red:0.62, green:0.83, blue:0.87, alpha:1.0)
+        cell.textLabel?.textColor = UIColor.whiteColor()
+        
+        tableView.backgroundColor = UIColor(red:0.62, green:0.83, blue:0.87, alpha:1.0)
+        tableView.separatorColor = UIColor(red:0.50, green:0.62, blue:0.75, alpha:1.0)
+        // return the cell
+        return cell
     }
 
     /*

@@ -16,9 +16,7 @@
 		30C6341C1C13959C0076E57F /* ios_decal_proj4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6341B1C13959C0076E57F /* ios_decal_proj4UITests.swift */; };
 		30C6342A1C139E810076E57F /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C634291C139E810076E57F /* login.png */; };
 		30C6342C1C13A3BA0076E57F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6342B1C13A3BA0076E57F /* HomeScreenViewController.swift */; };
-		30C634301C13A47F0076E57F /* SentMessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6342F1C13A47F0076E57F /* SentMessagesTableViewController.swift */; };
 		30C634321C13A4B90076E57F /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634311C13A4B90076E57F /* NewMessageViewController.swift */; };
-		30C634341C13A4D90076E57F /* MyFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634331C13A4D90076E57F /* MyFriendsTableViewController.swift */; };
 		30C634361C13A4F10076E57F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634351C13A4F10076E57F /* SettingsViewController.swift */; };
 		30C6343D1C13C1F80076E57F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C634371C13C1F80076E57F /* Bolts.framework */; };
 		30C6343E1C13C1F80076E57F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C634381C13C1F80076E57F /* Parse.framework */; };
@@ -40,6 +38,8 @@
 		30C6345A1C13C3310076E57F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C634591C13C3310076E57F /* Social.framework */; };
 		30C6345D1C13CCE00076E57F /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6345C1C13CCE00076E57F /* MessagesViewController.swift */; };
 		30C6345F1C13D1830076E57F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6345E1C13D1830076E57F /* SignUpViewController.swift */; };
+		30C634651C140ABE0076E57F /* SentMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634641C140ABE0076E57F /* SentMessagesViewController.swift */; };
+		30C634671C140B090076E57F /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634661C140B090076E57F /* FriendsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,9 +75,7 @@
 		30C6341D1C13959C0076E57F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30C634291C139E810076E57F /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login.png; path = "ios-decal-proj4/login.png"; sourceTree = "<group>"; };
 		30C6342B1C13A3BA0076E57F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
-		30C6342F1C13A47F0076E57F /* SentMessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMessagesTableViewController.swift; sourceTree = "<group>"; };
 		30C634311C13A4B90076E57F /* NewMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageViewController.swift; sourceTree = "<group>"; };
-		30C634331C13A4D90076E57F /* MyFriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewController.swift; sourceTree = "<group>"; };
 		30C634351C13A4F10076E57F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		30C634371C13C1F80076E57F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		30C634381C13C1F80076E57F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -99,6 +97,8 @@
 		30C634591C13C3310076E57F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		30C6345C1C13CCE00076E57F /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		30C6345E1C13D1830076E57F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		30C634641C140ABE0076E57F /* SentMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMessagesViewController.swift; sourceTree = "<group>"; };
+		30C634661C140B090076E57F /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +147,7 @@
 		30C633EF1C13959C0076E57F = {
 			isa = PBXGroup;
 			children = (
+				30C634641C140ABE0076E57F /* SentMessagesViewController.swift */,
 				30C6345B1C13C33F0076E57F /* Frameworks */,
 				30C634291C139E810076E57F /* login.png */,
 				30C633FA1C13959C0076E57F /* ios-decal-proj4 */,
@@ -172,12 +173,11 @@
 				30C633FB1C13959C0076E57F /* AppDelegate.swift */,
 				30C633FD1C13959C0076E57F /* ViewController.swift */,
 				30C633FF1C13959C0076E57F /* Main.storyboard */,
+				30C634661C140B090076E57F /* FriendsViewController.swift */,
 				30C6345E1C13D1830076E57F /* SignUpViewController.swift */,
 				30C6345C1C13CCE00076E57F /* MessagesViewController.swift */,
 				30C634351C13A4F10076E57F /* SettingsViewController.swift */,
-				30C634331C13A4D90076E57F /* MyFriendsTableViewController.swift */,
 				30C634311C13A4B90076E57F /* NewMessageViewController.swift */,
-				30C6342F1C13A47F0076E57F /* SentMessagesTableViewController.swift */,
 				30C6342B1C13A3BA0076E57F /* HomeScreenViewController.swift */,
 				30C634021C13959C0076E57F /* Assets.xcassets */,
 				30C634041C13959C0076E57F /* LaunchScreen.storyboard */,
@@ -362,14 +362,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C634651C140ABE0076E57F /* SentMessagesViewController.swift in Sources */,
+				30C634671C140B090076E57F /* FriendsViewController.swift in Sources */,
 				30C633FE1C13959C0076E57F /* ViewController.swift in Sources */,
 				30C634321C13A4B90076E57F /* NewMessageViewController.swift in Sources */,
 				30C633FC1C13959C0076E57F /* AppDelegate.swift in Sources */,
 				30C6345D1C13CCE00076E57F /* MessagesViewController.swift in Sources */,
 				30C6342C1C13A3BA0076E57F /* HomeScreenViewController.swift in Sources */,
-				30C634301C13A47F0076E57F /* SentMessagesTableViewController.swift in Sources */,
 				30C6345F1C13D1830076E57F /* SignUpViewController.swift in Sources */,
-				30C634341C13A4D90076E57F /* MyFriendsTableViewController.swift in Sources */,
 				30C634361C13A4F10076E57F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

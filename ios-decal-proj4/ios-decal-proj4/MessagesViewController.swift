@@ -74,13 +74,21 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = self.messageTableView.dequeueReusableCellWithIdentifier("MessageCell")! as UITableViewCell
 //         customize
         cell.textLabel?.text = self.messagesArray[indexPath.row]
-    
+//        background: rgb(157, 212, 222);
+
+        self.view.backgroundColor = UIColor(red:0.62, green:0.83, blue:0.87, alpha:1.0)
+        cell.backgroundColor = UIColor(red:0.62, green:0.83, blue:0.87, alpha:1.0)
+        cell.textLabel?.textColor = UIColor.whiteColor()
         
+        tableView.backgroundColor = UIColor(red:0.62, green:0.83, blue:0.87, alpha:1.0)
+        tableView.separatorColor = UIColor(red:0.50, green:0.62, blue:0.75, alpha:1.0)
         // return the cell
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        
         return messagesArray.count
     }
     
