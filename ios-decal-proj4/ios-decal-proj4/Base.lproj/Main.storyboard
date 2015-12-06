@@ -142,7 +142,6 @@
         <!--Home Screen View Controller-->
         <scene sceneID="a5p-uc-cUE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DX5-Lc-eMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="p1m-tx-SOa" customClass="HomeScreenViewController" customModule="ios_decal_proj4" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nos-Xe-Yhi"/>
@@ -172,6 +171,10 @@
                                     <segue destination="4it-tz-wtE" kind="show" id="48o-Pm-bRh"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fKh-v1-Q0H">
+                                <rect key="frame" x="0.0" y="64" width="375" height="557"/>
+                                <animations/>
+                            </mapView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -200,18 +203,22 @@
                         </button>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="ejl-7T-WOa">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S24-qZ-zPq">
-                                <rect key="frame" x="328" y="7" width="31" height="30"/>
+                                <rect key="frame" x="288" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <state key="normal" title="New"/>
+                                <state key="normal" title="Send SMS"/>
                                 <connections>
-                                    <segue destination="ECW-VP-jpb" kind="show" id="xJU-Yh-2sf"/>
+                                    <action selector="sendMessage:" destination="p1m-tx-SOa" eventType="touchUpInside" id="QMi-H1-55d"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="Map" destination="fKh-v1-Q0H" id="PAj-bO-abH"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DX5-Lc-eMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1178.5" y="262.5"/>
         </scene>
