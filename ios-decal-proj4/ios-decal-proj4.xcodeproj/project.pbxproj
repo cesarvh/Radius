@@ -39,6 +39,7 @@
 		30C634581C13C3270076E57F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C634571C13C3270076E57F /* Accounts.framework */; };
 		30C6345A1C13C3310076E57F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C634591C13C3310076E57F /* Social.framework */; };
 		30C6345D1C13CCE00076E57F /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6345C1C13CCE00076E57F /* MessagesViewController.swift */; };
+		30C6345F1C13D1830076E57F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6345E1C13D1830076E57F /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		30C634571C13C3270076E57F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		30C634591C13C3310076E57F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		30C6345C1C13CCE00076E57F /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		30C6345E1C13D1830076E57F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				30C633FB1C13959C0076E57F /* AppDelegate.swift */,
 				30C633FD1C13959C0076E57F /* ViewController.swift */,
 				30C633FF1C13959C0076E57F /* Main.storyboard */,
+				30C6345E1C13D1830076E57F /* SignUpViewController.swift */,
 				30C6345C1C13CCE00076E57F /* MessagesViewController.swift */,
 				30C634351C13A4F10076E57F /* SettingsViewController.swift */,
 				30C634331C13A4D90076E57F /* MyFriendsTableViewController.swift */,
@@ -365,6 +368,7 @@
 				30C6345D1C13CCE00076E57F /* MessagesViewController.swift in Sources */,
 				30C6342C1C13A3BA0076E57F /* HomeScreenViewController.swift in Sources */,
 				30C634301C13A47F0076E57F /* SentMessagesTableViewController.swift in Sources */,
+				30C6345F1C13D1830076E57F /* SignUpViewController.swift in Sources */,
 				30C634341C13A4D90076E57F /* MyFriendsTableViewController.swift in Sources */,
 				30C634361C13A4F10076E57F /* SettingsViewController.swift in Sources */,
 			);

@@ -10,6 +10,7 @@ import UIKit
 import Parse
 
 class SentMessagesTableViewController: UITableViewController {
+    @IBOutlet var messageTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

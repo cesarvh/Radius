@@ -8,17 +8,39 @@
 
 import UIKit
 
-class MessagesViewController: UIViewController {
-
+class MessagesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var messageTableView: UITableView!
+    var messagesArray:[String] = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.messageTableView.delegate = self
+        self.messageTableView.dataSource = self
 
+        self.messagesArray.append("hi")
+        self.messagesArray.append("bye")
+        
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        // create cell
+        let cell = self.messageTableView.dequeueReusableCellWithIdentifier("MessageCell")
+//         customize
+//        cell?.textLabel?.text = self.messagesArray
+        
+        // return the cell
+        return cell!
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messagesArray.count
     }
     
 
