@@ -97,7 +97,7 @@
 		30C634591C13C3310076E57F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		30C6345C1C13CCE00076E57F /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		30C6345E1C13D1830076E57F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		30C634641C140ABE0076E57F /* SentMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMessagesViewController.swift; sourceTree = "<group>"; };
+		30C634641C140ABE0076E57F /* SentMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SentMessagesViewController.swift; path = ../SentMessagesViewController.swift; sourceTree = "<group>"; };
 		30C634661C140B090076E57F /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,7 +147,6 @@
 		30C633EF1C13959C0076E57F = {
 			isa = PBXGroup;
 			children = (
-				30C634641C140ABE0076E57F /* SentMessagesViewController.swift */,
 				30C6345B1C13C33F0076E57F /* Frameworks */,
 				30C634291C139E810076E57F /* login.png */,
 				30C633FA1C13959C0076E57F /* ios-decal-proj4 */,
@@ -175,6 +174,7 @@
 				30C633FF1C13959C0076E57F /* Main.storyboard */,
 				30C634661C140B090076E57F /* FriendsViewController.swift */,
 				30C6345E1C13D1830076E57F /* SignUpViewController.swift */,
+				30C634641C140ABE0076E57F /* SentMessagesViewController.swift */,
 				30C6345C1C13CCE00076E57F /* MessagesViewController.swift */,
 				30C634351C13A4F10076E57F /* SettingsViewController.swift */,
 				30C634311C13A4B90076E57F /* NewMessageViewController.swift */,

@@ -8,10 +8,18 @@
 
 import UIKit
 
-class SentMessagesViewController: UIViewController {
+class SentMessagesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
+    @IBOutlet weak var sentMessagesTableView: UITableView!
+    var allMessages:[String] = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.sentMessagesTableView.delegate = self
+        self.sentMessagesTableView.dataSource = self
+        
+        self.allMessages.append("You are a poopie face")
 
         // Do any additional setup after loading the view.
     }
@@ -20,6 +28,31 @@ class SentMessagesViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        // create cell
+        let cell = self.sentMessagesTableView.dequeueReusableCellWithIdentifier("sentMessageCell")! as UITableViewCell
+        //         customize
+        cell.textLabel?.text = self.allMessages[indexPath.row]
+        //        background: rgb(157, 212, 222);
+        
+        self.view.backgroundColor = UIColor(red:0.62, green:0.83, blue:0.87, alpha:1.0)
+        cell.backgroundColor = UIColor(red:0.62, green:0.83, blue:0.87, alpha:1.0)
+        cell.textLabel?.textColor = UIColor.whiteColor()
+        
+        tableView.backgroundColor = UIColor(red:0.62, green:0.83, blue:0.87, alpha:1.0)
+        tableView.separatorColor = UIColor(red:0.50, green:0.62, blue:0.75, alpha:1.0)
+        // return the cell
+        return cell
+    }
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        
+        return allMessages.count
+    }
+    
     
 
     /*
