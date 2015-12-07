@@ -42,8 +42,19 @@ class AddNewFriendViewController: UIViewController {
         query!.whereKey("username", equalTo:username)
         do {
             try query?.getFirstObject()
+//                var userToAdd = PFQuery(className: "friends")
+                var currentUser = PFUser.currentUser()
+                var friendsClass = PFObject(className: "friends")
+//                friendsClass.append(username)
+            
+            
+//                currentUser?.saveInBackgroundWithBlock(<#T##block: PFBooleanResultBlock?##PFBooleanResultBlock?##(Bool, NSError?) -> Void#>)
+            
+            
+            
                 // then the user exists
                 // to do: add the user to the friends database?!?!??!?!??!? how the fuck do i do this wtf bruh
+            
         } catch {
             let alertController = UIAlertController(title: "Radius", message:
                 "This user does not exist", preferredStyle: UIAlertControllerStyle.Alert)
