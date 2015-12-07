@@ -347,7 +347,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vt-4Q-yAY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1698.5" y="382.5"/>
+            <point key="canvasLocation" x="1960.5" y="328.5"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="a5p-uc-cUE">
@@ -421,8 +421,7 @@
                                     <color key="titleColor" red="0.31329652667045593" green="0.4924357533454895" blue="0.50217342376708984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="sendMessage:" destination="p1m-tx-SOa" eventType="touchUpInside" id="QMi-H1-55d"/>
-                                    <segue destination="ECW-VP-jpb" kind="show" id="Qok-FR-eax"/>
+                                    <segue destination="ECW-VP-jpb" kind="show" id="ONZ-Z8-UaU"/>
                                 </connections>
                             </button>
                         </barButtonItem>
