@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		303B3F251C153A63007C3F91 /* archive.png in Resources */ = {isa = PBXBuildFile; fileRef = 303B3F201C153A63007C3F91 /* archive.png */; };
+		303B3F261C153A63007C3F91 /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 303B3F211C153A63007C3F91 /* friends.png */; };
+		303B3F271C153A63007C3F91 /* newMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 303B3F221C153A63007C3F91 /* newMessage.png */; };
+		303B3F281C153A63007C3F91 /* sentMessages.png in Resources */ = {isa = PBXBuildFile; fileRef = 303B3F231C153A63007C3F91 /* sentMessages.png */; };
+		303B3F291C153A63007C3F91 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 303B3F241C153A63007C3F91 /* settings.png */; };
 		30C633FC1C13959C0076E57F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C633FB1C13959C0076E57F /* AppDelegate.swift */; };
 		30C633FE1C13959C0076E57F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C633FD1C13959C0076E57F /* ViewController.swift */; };
 		30C634011C13959C0076E57F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C633FF1C13959C0076E57F /* Main.storyboard */; };
@@ -60,6 +65,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		303B3F201C153A63007C3F91 /* archive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = archive.png; sourceTree = "<group>"; };
+		303B3F211C153A63007C3F91 /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends.png; sourceTree = "<group>"; };
+		303B3F221C153A63007C3F91 /* newMessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newMessage.png; sourceTree = "<group>"; };
+		303B3F231C153A63007C3F91 /* sentMessages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sentMessages.png; sourceTree = "<group>"; };
+		303B3F241C153A63007C3F91 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		30C633F81C13959C0076E57F /* ios-decal-proj4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-decal-proj4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C633FB1C13959C0076E57F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30C633FD1C13959C0076E57F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +157,11 @@
 		30C633EF1C13959C0076E57F = {
 			isa = PBXGroup;
 			children = (
+				303B3F201C153A63007C3F91 /* archive.png */,
+				303B3F211C153A63007C3F91 /* friends.png */,
+				303B3F221C153A63007C3F91 /* newMessage.png */,
+				303B3F231C153A63007C3F91 /* sentMessages.png */,
+				303B3F241C153A63007C3F91 /* settings.png */,
 				30C6345B1C13C33F0076E57F /* Frameworks */,
 				30C634291C139E810076E57F /* login.png */,
 				30C633FA1C13959C0076E57F /* ios-decal-proj4 */,
@@ -334,6 +349,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				303B3F251C153A63007C3F91 /* archive.png in Resources */,
+				303B3F261C153A63007C3F91 /* friends.png in Resources */,
+				303B3F271C153A63007C3F91 /* newMessage.png in Resources */,
+				303B3F281C153A63007C3F91 /* sentMessages.png in Resources */,
+				303B3F291C153A63007C3F91 /* settings.png in Resources */,
 				30C6342A1C139E810076E57F /* login.png in Resources */,
 				30C634061C13959C0076E57F /* LaunchScreen.storyboard in Resources */,
 				30C634031C13959C0076E57F /* Assets.xcassets in Resources */,

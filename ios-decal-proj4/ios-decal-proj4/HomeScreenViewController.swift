@@ -12,6 +12,7 @@ import MapKit
 import CoreLocation
 
 class HomeScreenViewController: UIViewController, MFMessageComposeViewControllerDelegate, MKMapViewDelegate, CLLocationManagerDelegate{
+    @IBOutlet weak var bottomNavBar: UINavigationBar!
     
     @IBOutlet weak var Map: MKMapView!
     let locationmanager = CLLocationManager()
@@ -22,6 +23,11 @@ class HomeScreenViewController: UIViewController, MFMessageComposeViewController
         self.locationmanager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         self.locationmanager.requestWhenInUseAuthorization()
         self.locationmanager.startUpdatingLocation()
+        self.navigationController!.navigationBar.barTintColor = UIColor(red:0.81, green:0.92, blue:0.93, alpha:1.0)
+        
+
+        
+
         self.Map.showsUserLocation = true
         
         
