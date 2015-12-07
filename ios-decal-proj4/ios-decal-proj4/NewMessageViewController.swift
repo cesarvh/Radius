@@ -12,6 +12,10 @@ import Parse
 class NewMessageViewController: UIViewController {
 
     @IBOutlet weak var newMessageField: UITextField!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         newMessageField.becomeFirstResponder()
@@ -25,6 +29,10 @@ class NewMessageViewController: UIViewController {
     }
     
 
+    @IBAction func sendButtonPressed(sender: AnyObject) {
+        
+        
+    }
 
     /*
     // MARK: - Navigation
