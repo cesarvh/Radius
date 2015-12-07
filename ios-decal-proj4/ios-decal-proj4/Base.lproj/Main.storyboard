@@ -63,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77.5" y="262.5"/>
+            <point key="canvasLocation" x="529.5" y="382.5"/>
         </scene>
         <!--Friends View Controller-->
         <scene sceneID="aCo-Q4-aQw">
@@ -98,6 +98,13 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="vvk-bV-VyH">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="SaI-ag-zJv">
+                            <connections>
+                                <segue destination="DHv-4W-9hj" kind="show" id="DjS-l0-AGN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="friendsTableView" destination="hwE-GC-Wa7" id="G1x-2h-YU7"/>
@@ -105,7 +112,76 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdW-pA-HtY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="703.5" y="1226.5"/>
+            <point key="canvasLocation" x="919.5" y="1100.5"/>
+        </scene>
+        <!--Add New Friend View Controller-->
+        <scene sceneID="Q3w-U1-ja7">
+            <objects>
+                <viewController id="DHv-4W-9hj" customClass="AddNewFriendViewController" customModule="ios_decal_proj4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jG7-8G-xto"/>
+                        <viewControllerLayoutGuide type="bottom" id="IKA-8A-v22"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x5l-GM-8dh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nk1-2h-BRl">
+                                <rect key="frame" x="0.0" y="64" width="375" height="41"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zir-Kl-1AE">
+                                        <rect key="frame" x="8" y="5" width="311" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghN-T8-zSG">
+                                        <rect key="frame" x="323" y="6" width="44" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="2Uu-B7-qap"/>
+                                        </constraints>
+                                        <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="DHv-4W-9hj" eventType="touchUpInside" id="YS9-qQ-4al"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.8332030177116394" green="0.92843729257583618" blue="0.94148832559585571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ghN-T8-zSG" firstAttribute="top" secondItem="nk1-2h-BRl" secondAttribute="top" constant="6" id="3MM-NF-hpv"/>
+                                    <constraint firstAttribute="bottom" secondItem="zir-Kl-1AE" secondAttribute="bottom" constant="6" id="5qP-lq-l1T"/>
+                                    <constraint firstItem="ghN-T8-zSG" firstAttribute="leading" secondItem="zir-Kl-1AE" secondAttribute="trailing" constant="4" id="6VV-hY-nJG"/>
+                                    <constraint firstItem="zir-Kl-1AE" firstAttribute="leading" secondItem="nk1-2h-BRl" secondAttribute="leadingMargin" id="6XL-9s-aSJ"/>
+                                    <constraint firstItem="zir-Kl-1AE" firstAttribute="centerY" secondItem="nk1-2h-BRl" secondAttribute="centerY" id="70f-rL-Edv"/>
+                                    <constraint firstItem="zir-Kl-1AE" firstAttribute="top" secondItem="nk1-2h-BRl" secondAttribute="top" constant="5" id="IH4-AQ-udN"/>
+                                    <constraint firstItem="ghN-T8-zSG" firstAttribute="centerY" secondItem="nk1-2h-BRl" secondAttribute="centerY" id="KMH-Ih-s92"/>
+                                    <constraint firstItem="ghN-T8-zSG" firstAttribute="top" secondItem="nk1-2h-BRl" secondAttribute="top" constant="6" id="MCS-vZ-Gt5"/>
+                                    <constraint firstItem="zir-Kl-1AE" firstAttribute="top" secondItem="nk1-2h-BRl" secondAttribute="top" constant="5" id="WFi-KP-GUA"/>
+                                    <constraint firstAttribute="bottom" secondItem="ghN-T8-zSG" secondAttribute="bottom" constant="5" id="Y5E-2B-D6l"/>
+                                    <constraint firstItem="zir-Kl-1AE" firstAttribute="leading" secondItem="nk1-2h-BRl" secondAttribute="leading" constant="8" id="Zxj-cm-8Q2"/>
+                                    <constraint firstAttribute="trailing" secondItem="ghN-T8-zSG" secondAttribute="trailing" constant="8" id="cnS-9J-YA7"/>
+                                    <constraint firstItem="zir-Kl-1AE" firstAttribute="top" secondItem="nk1-2h-BRl" secondAttribute="top" constant="5" id="iSn-jS-JpR"/>
+                                    <constraint firstItem="ghN-T8-zSG" firstAttribute="top" secondItem="nk1-2h-BRl" secondAttribute="top" constant="6" id="je8-SE-JOB"/>
+                                    <constraint firstItem="ghN-T8-zSG" firstAttribute="leading" secondItem="nk1-2h-BRl" secondAttribute="leading" constant="323" id="jh2-AX-dw7"/>
+                                    <constraint firstItem="ghN-T8-zSG" firstAttribute="trailing" secondItem="nk1-2h-BRl" secondAttribute="trailingMargin" id="kf2-HI-wj0"/>
+                                    <constraint firstItem="zir-Kl-1AE" firstAttribute="leading" secondItem="nk1-2h-BRl" secondAttribute="leading" constant="8" id="qFr-7B-UWf"/>
+                                    <constraint firstItem="zir-Kl-1AE" firstAttribute="leading" secondItem="nk1-2h-BRl" secondAttribute="leading" constant="8" id="vTQ-hF-9K0"/>
+                                    <constraint firstAttribute="trailing" secondItem="ghN-T8-zSG" secondAttribute="trailing" constant="8" id="yYD-97-0kF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.66564351320266724" green="0.86480039358139038" blue="0.89500337839126587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="newFriendBar" destination="zir-Kl-1AE" id="jF1-Ka-Sp4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sej-62-fjm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="919.5" y="1914.5"/>
         </scene>
         <!--Messages View Controller-->
         <scene sceneID="m61-Qk-HCV">
@@ -146,6 +222,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="myx-Pe-bI6" secondAttribute="trailing" constant="-20" id="zWE-oC-OlA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="o5e-TY-k5s"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="messageTableView" destination="myx-Pe-bI6" id="hzq-it-aRH"/>
@@ -155,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4a-Pn-dqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887.5" y="-546.5"/>
+            <point key="canvasLocation" x="1308.5" y="1100.5"/>
         </scene>
         <!--Sent Messages View Controller-->
         <scene sceneID="qOp-HZ-Z1g">
@@ -190,6 +267,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8Ku-ne-hLM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="SentMessagesTableView" destination="6Va-zI-w26" id="zBF-q1-tNE"/>
@@ -197,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QaF-7M-CIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1645.5" y="-501.5"/>
+            <point key="canvasLocation" x="1698.5" y="1100.5"/>
         </scene>
         <!--New Message-->
         <scene sceneID="vus-G8-t1O">
@@ -269,7 +347,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vt-4Q-yAY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889.5" y="446.5"/>
+            <point key="canvasLocation" x="1698.5" y="382.5"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="a5p-uc-cUE">
@@ -356,13 +434,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DX5-Lc-eMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1308.5" y="318.5"/>
+            <point key="canvasLocation" x="1308.5" y="382.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2tA-oq-V7A">
             <objects>
                 <navigationController storyboardIdentifier="Home" automaticallyAdjustsScrollViewInsets="NO" id="LBS-rw-ec7" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zZL-Gk-Wmc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -375,7 +454,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCE-WU-JHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="654.5" y="257.5"/>
+            <point key="canvasLocation" x="919.5" y="382.5"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="esw-dk-jeL">
@@ -443,7 +522,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wIT-Zo-THn" sceneMemberID="firstResponder"/>
                 <exit id="wfY-1k-MnV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="77.5" y="1040.5"/>
+            <point key="canvasLocation" x="529.5" y="1100.5"/>
         </scene>
     </scenes>
     <resources>

@@ -12,6 +12,7 @@
 		303B3F271C153A63007C3F91 /* newMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 303B3F221C153A63007C3F91 /* newMessage.png */; };
 		303B3F281C153A63007C3F91 /* sentMessages.png in Resources */ = {isa = PBXBuildFile; fileRef = 303B3F231C153A63007C3F91 /* sentMessages.png */; };
 		303B3F291C153A63007C3F91 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 303B3F241C153A63007C3F91 /* settings.png */; };
+		303B3F2B1C155352007C3F91 /* AddNewFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B3F2A1C155352007C3F91 /* AddNewFriendViewController.swift */; };
 		30C633FC1C13959C0076E57F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C633FB1C13959C0076E57F /* AppDelegate.swift */; };
 		30C633FE1C13959C0076E57F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C633FD1C13959C0076E57F /* ViewController.swift */; };
 		30C634011C13959C0076E57F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C633FF1C13959C0076E57F /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		303B3F221C153A63007C3F91 /* newMessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newMessage.png; sourceTree = "<group>"; };
 		303B3F231C153A63007C3F91 /* sentMessages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sentMessages.png; sourceTree = "<group>"; };
 		303B3F241C153A63007C3F91 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		303B3F2A1C155352007C3F91 /* AddNewFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewFriendViewController.swift; sourceTree = "<group>"; };
 		30C633F81C13959C0076E57F /* ios-decal-proj4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-decal-proj4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C633FB1C13959C0076E57F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30C633FD1C13959C0076E57F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				30C633FB1C13959C0076E57F /* AppDelegate.swift */,
 				30C633FD1C13959C0076E57F /* ViewController.swift */,
 				30C633FF1C13959C0076E57F /* Main.storyboard */,
+				303B3F2A1C155352007C3F91 /* AddNewFriendViewController.swift */,
 				30C634661C140B090076E57F /* FriendsViewController.swift */,
 				30C6345E1C13D1830076E57F /* SignUpViewController.swift */,
 				30C634641C140ABE0076E57F /* SentMessagesViewController.swift */,
@@ -382,6 +385,7 @@
 				30C634651C140ABE0076E57F /* SentMessagesViewController.swift in Sources */,
 				30C634671C140B090076E57F /* FriendsViewController.swift in Sources */,
 				30C633FE1C13959C0076E57F /* ViewController.swift in Sources */,
+				303B3F2B1C155352007C3F91 /* AddNewFriendViewController.swift in Sources */,
 				30C634321C13A4B90076E57F /* NewMessageViewController.swift in Sources */,
 				30C633FC1C13959C0076E57F /* AppDelegate.swift in Sources */,
 				30C6345D1C13CCE00076E57F /* MessagesViewController.swift in Sources */,

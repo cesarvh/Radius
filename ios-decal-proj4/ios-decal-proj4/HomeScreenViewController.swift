@@ -11,7 +11,7 @@ import MessageUI
 import MapKit
 import CoreLocation
 
-class HomeScreenViewController: UIViewController, MFMessageComposeViewControllerDelegate, MKMapViewDelegate, CLLocationManagerDelegate{
+class HomeScreenViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
     @IBOutlet weak var bottomNavBar: UINavigationBar!
     
     @IBOutlet weak var Map: MKMapView!
@@ -25,6 +25,10 @@ class HomeScreenViewController: UIViewController, MFMessageComposeViewController
         self.locationmanager.startUpdatingLocation()
         self.navigationController!.navigationBar.barTintColor = UIColor(red:0.81, green:0.92, blue:0.93, alpha:1.0)
         
+        
+
+    
+
 
         
 
@@ -43,30 +47,7 @@ class HomeScreenViewController: UIViewController, MFMessageComposeViewController
         return MFMessageComposeViewController.canSendText()
     }
     
-    @IBAction func sendMessage(sender: AnyObject) {
-        let messageVC = MFMessageComposeViewController()
-        
-        messageVC.body = "Enter a message";
-        messageVC.recipients = ["Enter tel-nr"]
-        messageVC.messageComposeDelegate = self;
-        
-        //        self.presentViewController(messageVC, animated: false, completion: nil)
-    }
-    func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result: MessageComposeResult) {
-        switch (result.rawValue) {
-        case MessageComposeResultCancelled.rawValue:
-            print("Message was cancelled")
-            self.dismissViewControllerAnimated(true, completion: nil)
-        case MessageComposeResultFailed.rawValue:
-            print("Message failed")
-            self.dismissViewControllerAnimated(true, completion: nil)
-        case MessageComposeResultSent.rawValue:
-            print("Message was sent")
-            self.dismissViewControllerAnimated(true, completion: nil)
-        default:
-            break;
-        }
-    }
+
     
     /*
     // MARK: - Navigation
