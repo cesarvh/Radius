@@ -22,7 +22,6 @@
 		30C6342A1C139E810076E57F /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C634291C139E810076E57F /* login.png */; };
 		30C6342C1C13A3BA0076E57F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6342B1C13A3BA0076E57F /* HomeScreenViewController.swift */; };
 		30C634321C13A4B90076E57F /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634311C13A4B90076E57F /* NewMessageViewController.swift */; };
-		30C634361C13A4F10076E57F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634351C13A4F10076E57F /* SettingsViewController.swift */; };
 		30C6343D1C13C1F80076E57F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C634371C13C1F80076E57F /* Bolts.framework */; };
 		30C6343E1C13C1F80076E57F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C634381C13C1F80076E57F /* Parse.framework */; };
 		30C6343F1C13C1F80076E57F /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C634391C13C1F80076E57F /* ParseFacebookUtils.framework */; };
@@ -86,7 +85,6 @@
 		30C634291C139E810076E57F /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login.png; path = "ios-decal-proj4/login.png"; sourceTree = "<group>"; };
 		30C6342B1C13A3BA0076E57F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		30C634311C13A4B90076E57F /* NewMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageViewController.swift; sourceTree = "<group>"; };
-		30C634351C13A4F10076E57F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		30C634371C13C1F80076E57F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		30C634381C13C1F80076E57F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		30C634391C13C1F80076E57F /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 				30C6345E1C13D1830076E57F /* SignUpViewController.swift */,
 				30C634641C140ABE0076E57F /* SentMessagesViewController.swift */,
 				30C6345C1C13CCE00076E57F /* MessagesViewController.swift */,
-				30C634351C13A4F10076E57F /* SettingsViewController.swift */,
 				30C634311C13A4B90076E57F /* NewMessageViewController.swift */,
 				30C6342B1C13A3BA0076E57F /* HomeScreenViewController.swift */,
 				30C634021C13959C0076E57F /* Assets.xcassets */,
@@ -390,7 +387,6 @@
 				30C6345D1C13CCE00076E57F /* MessagesViewController.swift in Sources */,
 				30C6342C1C13A3BA0076E57F /* HomeScreenViewController.swift in Sources */,
 				30C6345F1C13D1830076E57F /* SignUpViewController.swift in Sources */,
-				30C634361C13A4F10076E57F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

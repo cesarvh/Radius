@@ -27,7 +27,7 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.85882352941176465" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="pokemon13" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="g8x-pd-0CV">
                                 <rect key="frame" x="94" y="411" width="186" height="30"/>
@@ -218,7 +218,7 @@
                                         <rect key="frame" x="8" y="5" width="311" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndO-JU-DNv">
                                         <rect key="frame" x="327" y="5" width="44" height="30"/>
@@ -231,7 +231,7 @@
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.8332030177116394" green="0.92843729257583618" blue="0.94148832559585571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Lra-Ju-vg7" firstAttribute="leading" secondItem="rp9-nI-l5K" secondAttribute="leadingMargin" id="1YX-Nw-e1f"/>
                                     <constraint firstItem="ndO-JU-DNv" firstAttribute="leading" secondItem="Lra-Ju-vg7" secondAttribute="trailing" constant="8" id="4cn-Z5-WDJ"/>
@@ -240,6 +240,17 @@
                                     <constraint firstItem="ndO-JU-DNv" firstAttribute="centerY" secondItem="rp9-nI-l5K" secondAttribute="centerY" id="atH-DP-1ER"/>
                                 </constraints>
                             </view>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="To:" translatesAutoresizingMaskIntoConstraints="NO" id="T2m-rZ-zaa">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <animations/>
+                                <color key="barTintColor" red="0.8332030177116394" green="0.92843729257583618" blue="0.94148832559585571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <offsetWrapper key="searchTextPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.66564351320266724" green="0.86480039358139038" blue="0.89500337839126587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -280,23 +291,13 @@
                                 <rect key="frame" x="0.0" y="619" width="375" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5e-2t-d1Z">
-                                        <rect key="frame" x="77" y="6" width="52" height="35"/>
+                                        <rect key="frame" x="161" y="6" width="52" height="35"/>
                                         <animations/>
                                         <state key="normal" image="friends.png">
                                             <color key="titleColor" red="0.31329652667045593" green="0.4924357533454895" blue="0.50217342376708984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <segue destination="641-an-KbZ" kind="show" id="ewp-AZ-72v"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAV-bt-clG">
-                                        <rect key="frame" x="266" y="-4" width="57" height="56"/>
-                                        <animations/>
-                                        <state key="normal" image="settings.png">
-                                            <color key="titleColor" red="0.8332030177116394" green="0.92843729257583618" blue="0.94148832559585571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="4it-tz-wtE" kind="show" id="48o-Pm-bRh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -356,27 +357,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DX5-Lc-eMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1308.5" y="318.5"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="meB-zQ-wLt">
-            <objects>
-                <viewController id="4it-tz-wtE" customClass="SettingsViewController" customModule="ios_decal_proj4" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DTG-CC-6Hl"/>
-                        <viewControllerLayoutGuide type="bottom" id="w8E-DE-nB1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ygu-7y-o8Y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" red="0.66564351320266724" green="0.86480039358139038" blue="0.89500337839126587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Settings" id="YeN-Mv-m1h"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zvf-fx-uxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1396.5" y="1300.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2tA-oq-V7A">
@@ -472,6 +452,5 @@
         <image name="login.png" width="396" height="684"/>
         <image name="newMessage.png" width="41" height="35"/>
         <image name="sentMessages.png" width="64" height="35"/>
-        <image name="settings.png" width="35" height="35"/>
     </resources>
 </document>
