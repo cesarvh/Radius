@@ -10,7 +10,9 @@ import UIKit
 
 class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     @IBOutlet weak var friendsTableView: UITableView!
-    var friendsArray:[String] = [String]()
+//    var friendsArray: NSMutableArray = NSMutableArray();
+//    var friendsArray:[String] = [String]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,20 +20,26 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.friendsTableView.delegate = self
         self.friendsTableView.dataSource = self
         
-        self.friendsArray.append("Kelly")
-        self.friendsArray.append("Nag")
-        self.friendsArray.append("Olivia")
-        
-        
+        mainInstance.friendsArray.addObject("kelly")
+        mainInstance.friendsArray.addObject("nag")
+        mainInstance.friendsArray.addObject("olivia")
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:",name:"load", object: nil)
+
+
 
         // Do any additional setup after loading the view.
+    }
+    
+    func loadList(notification: NSNotification){
+        //load data here
+        self.friendsTableView.reloadData()
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // create cell
         let cell = self.friendsTableView.dequeueReusableCellWithIdentifier("friendCell")! as UITableViewCell
         //         customize
-        cell.textLabel?.text = self.friendsArray[indexPath.row]
+        cell.textLabel?.text = mainInstance.friendsArray[indexPath.row] as! String
         //        background: rgb(157, 212, 222);
         
         self.view.backgroundColor = UIColor(red:0.62, green:0.83, blue:0.87, alpha:1.0)
@@ -48,7 +56,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         
-        return friendsArray.count
+        return mainInstance.friendsArray.count
     }
     
     

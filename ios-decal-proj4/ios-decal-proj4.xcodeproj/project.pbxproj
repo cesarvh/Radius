@@ -45,6 +45,7 @@
 		30C6345F1C13D1830076E57F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6345E1C13D1830076E57F /* SignUpViewController.swift */; };
 		30C634651C140ABE0076E57F /* SentMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634641C140ABE0076E57F /* SentMessagesViewController.swift */; };
 		30C634671C140B090076E57F /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634661C140B090076E57F /* FriendsViewController.swift */; };
+		30F470C71C1641B1009C4147 /* global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F470C61C1641B1009C4147 /* global.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		30C6345E1C13D1830076E57F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		30C634641C140ABE0076E57F /* SentMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SentMessagesViewController.swift; path = ../SentMessagesViewController.swift; sourceTree = "<group>"; };
 		30C634661C140B090076E57F /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		30F470C61C1641B1009C4147 /* global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = global.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,13 +159,8 @@
 		30C633EF1C13959C0076E57F = {
 			isa = PBXGroup;
 			children = (
-				303B3F201C153A63007C3F91 /* archive.png */,
-				303B3F211C153A63007C3F91 /* friends.png */,
-				303B3F221C153A63007C3F91 /* newMessage.png */,
-				303B3F231C153A63007C3F91 /* sentMessages.png */,
-				303B3F241C153A63007C3F91 /* settings.png */,
+				30F470C51C163CAF009C4147 /* images */,
 				30C6345B1C13C33F0076E57F /* Frameworks */,
-				30C634291C139E810076E57F /* login.png */,
 				30C633FA1C13959C0076E57F /* ios-decal-proj4 */,
 				30C6340F1C13959C0076E57F /* ios-decal-proj4Tests */,
 				30C6341A1C13959C0076E57F /* ios-decal-proj4UITests */,
@@ -188,6 +185,7 @@
 				30C633FD1C13959C0076E57F /* ViewController.swift */,
 				30C633FF1C13959C0076E57F /* Main.storyboard */,
 				303B3F2A1C155352007C3F91 /* AddNewFriendViewController.swift */,
+				30F470C61C1641B1009C4147 /* global.swift */,
 				30C634661C140B090076E57F /* FriendsViewController.swift */,
 				30C6345E1C13D1830076E57F /* SignUpViewController.swift */,
 				30C634641C140ABE0076E57F /* SentMessagesViewController.swift */,
@@ -242,6 +240,19 @@
 				30C6343C1C13C1F80076E57F /* ParseUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30F470C51C163CAF009C4147 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				303B3F201C153A63007C3F91 /* archive.png */,
+				303B3F211C153A63007C3F91 /* friends.png */,
+				303B3F221C153A63007C3F91 /* newMessage.png */,
+				303B3F231C153A63007C3F91 /* sentMessages.png */,
+				303B3F241C153A63007C3F91 /* settings.png */,
+				30C634291C139E810076E57F /* login.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +397,7 @@
 				30C634671C140B090076E57F /* FriendsViewController.swift in Sources */,
 				30C633FE1C13959C0076E57F /* ViewController.swift in Sources */,
 				303B3F2B1C155352007C3F91 /* AddNewFriendViewController.swift in Sources */,
+				30F470C71C1641B1009C4147 /* global.swift in Sources */,
 				30C634321C13A4B90076E57F /* NewMessageViewController.swift in Sources */,
 				30C633FC1C13959C0076E57F /* AppDelegate.swift in Sources */,
 				30C6345D1C13CCE00076E57F /* MessagesViewController.swift in Sources */,

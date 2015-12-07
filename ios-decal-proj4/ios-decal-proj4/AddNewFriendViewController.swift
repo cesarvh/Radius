@@ -13,6 +13,12 @@ class AddNewFriendViewController: UIViewController {
 
     @IBOutlet weak var newFriendBar: UITextField!
     
+//    var friendsArray : NSMutableArray = NSMutableArray()
+    
+//    let friendsViewInstance = FriendsViewController()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         newFriendBar.becomeFirstResponder()
@@ -42,18 +48,23 @@ class AddNewFriendViewController: UIViewController {
         query!.whereKey("username", equalTo:username)
         do {
             try query?.getFirstObject()
-//                var userToAdd = PFQuery(className: "friends")
-                var currentUser = PFUser.currentUser()
-                var friendsClass = PFObject(className: "friends")
-//                friendsClass.append(username)
+//                var friends = PFObject(className: "User")
+                var friends = PFUser.currentUser()
+                mainInstance.friendsArray.addObject(username)
+                NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
+
+                friends!["friends"] = mainInstance.friendsArray
+                friends!.saveInBackgroundWithBlock{
+                    (success: Bool, error: NSError?) -> Void in
+                    if (success) {
+                        print("saved!")
+                    } else {
+                        print("something went wrong :( ")
+                    }
+                }
+                
             
-            
-//                currentUser?.saveInBackgroundWithBlock(<#T##block: PFBooleanResultBlock?##PFBooleanResultBlock?##(Bool, NSError?) -> Void#>)
-            
-            
-            
-                // then the user exists
-                // to do: add the user to the friends database?!?!??!?!??!? how the fuck do i do this wtf bruh
+        
             
         } catch {
             let alertController = UIAlertController(title: "Radius", message:
@@ -68,9 +79,6 @@ class AddNewFriendViewController: UIViewController {
         
         
     }
-    
-
-    
 
     
 

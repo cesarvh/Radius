@@ -347,7 +347,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vt-4Q-yAY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708.5" y="382.5"/>
+            <point key="canvasLocation" x="1717.5" y="382.5"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="a5p-uc-cUE">
@@ -498,7 +498,7 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.85882352939999995" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IzL-4a-6YL">
                                 <rect key="frame" x="158" y="503" width="59" height="30"/>

@@ -29,9 +29,6 @@ class SignUpViewController: UIViewController {
         
         var username = self.usernameTF.text
         var password = self.passwordTF.text
-        username = username?.lowercaseString
-        password = password?.lowercaseString
-        
         var email = self.emailTF.text
         var finalEmail = email!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         
@@ -54,7 +51,6 @@ class SignUpViewController: UIViewController {
             spinner.startAnimating()
             
             var newUser = PFUser()
-            
             
             newUser.username = username
             newUser.password = password
