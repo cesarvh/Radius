@@ -69,6 +69,7 @@ class AddNewFriendViewController: UIViewController {
                         (success: Bool, error: NSError?) -> Void in
                         if (success) {
                             print("saved!")
+                            self.navigationController?.popViewControllerAnimated(true)
                         } else {
                             print("something went wrong :( ")
                         }
