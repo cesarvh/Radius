@@ -20,7 +20,8 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     
     var messagesArray: NSMutableArray = NSMutableArray()
     
-    
+    var unreadArray: NSMutableArray = NSMutableArray()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.messageTableView.reloadData()
@@ -30,13 +31,13 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
         
         //        self.messageTextField.delegate = self
         
-//        self.messagesArray.addObject("hi")
-//        self.messagesArray.addObject("bye")
+        self.messagesArray.addObject("hi")
+        self.messagesArray.addObject("bye")
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:", name:"load", object: nil)
         loadMessages()
-//        for message in messagesArray {
-//            print(message)
-//        }
+        for message in messagesArray {
+            print(message)
+        }
         loadDataFromParse()
         // Do any additional setup after loading the view.
     }
@@ -134,6 +135,8 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
                             object["received"] = true
                             object.saveInBackground()
                             self.messagesArray.addObject(object_msg as! (String))
+                            self.unreadArray.addObject(object_msg as! (String))
+
                             NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
                         }
                     }
@@ -184,6 +187,10 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = self.messageTableView.dequeueReusableCellWithIdentifier("MessageCell")! as UITableViewCell
         //         customize
         cell.textLabel?.text = self.messagesArray[indexPath.row] as! String
+        let string = cell.textLabel?.text
+        if unreadArray.contains({$0 as! String==string!}) {
+            cell.textLabel?.font = UIFont.boldSystemFontOfSize(20.0)
+        }
         //        background: rgb(157, 212, 222);
         
         self.view.backgroundColor = UIColor(red:0.62, green:0.83, blue:0.87, alpha:1.0)
@@ -220,64 +227,59 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
-
-            let byeMsg = messagesArray.objectAtIndex(indexPath.row)
-            messagesArray.removeObjectAtIndex(indexPath.row)
+            // delete the friend on UI
+            // delete the friend in the parse array
+            //            var query = PFUser.query()
+            //            query!.whereKey("username", equalTo:username)
             
-            var query = PFQuery(className:"SentMessages")
-            do {
-                var messagesDB = try query.findObjects()
-                var editableMessagesFromDB = messagesDB as! NSMutableArray
-                var i = 0
-                while (i != editableMessagesFromDB.count) {
-                    if (editableMessagesFromDB[i]["Message"] as! String == byeMsg as! String) {
-                        editableMessagesFromDB.removeObjectAtIndex(i)
-                        
-                    }
-                    i += 1
-                }
-                
-            } catch {
-                
-            }
-//                        var query = PFQuery(className:"SentMessages")
-//                        do {
-//                            var messagesDB = try query.findObjects()
-//                            var editableMessagesFromDB = messagesDB as! NSMutableArray
-//                            var i = 0
-//                            while (i != editableMessagesFromDB.count) {
-//                                if (editableMessagesFromDB[i]["Message"] as! String == byeMsg as! String) {
-//                                    editableMessagesFromDB.removeObjectAtIndex(i)
-////                                    messagesDB = editableMessagesFromDB
-//            
-//                                }
-//                                return;
-//                                i += 1
-//                            }
-//            
-//                        } catch {
-//                            print("nah")
-//                        }
-//            //
-//                        query.getObjectInBackgroundWithId((PFUser.currentUser()?.objectId)!) {
-//                            (friendsDatabase: PFObject?, error: NSError?) -> Void in
-//                            if error != nil {
-//                                print(error)
-//                            } else if let friendsDatabase = friendsDatabase {
-//                                var temp = friendsDatabase["friends"] as! NSMutableArray
-//                                temp.removeObject(byeFriend)
-//                                friendsDatabase["friends"] = temp
-//                                friendsDatabase.saveInBackground()
-//            
-//                            }
-//                        }
+            var byeMsg = messagesArray.objectAtIndex(indexPath.row)
+            //
+            //
+            //            messagesArray.removeObjectAtIndex(indexPath.row)
+            //
+            //
+            //
+            //            var query = PFQuery(className:"SentMessages")
+            //            do {
+            //                var messagesDB = try query.findObjects()
+            //                if (var editableMessagesFromDB = messagesDB as! NSMutableArray) {
+            //
+            //                }
+            //
+            //                var i = 0
+            //                while (i != editableMessagesFromDB.count) {
+            //                    if (editableMessagesFromDB[i]["Message"] as! String == byeMsg as! String) {
+            //                        editableMessagesFromDB.removeObjectAtIndex(i)
+            //                        messagesDB = editableMessagesFromDB
+            //
+            //                    }
+            //                    return;
+            //                    i += 1
+            //                }
+            //
+            //            } catch {
+            //                print("nah")
+            //            }
+            ////
+            //            query.getObjectInBackgroundWithId((PFUser.currentUser()?.objectId)!) {
+            //                (friendsDatabase: PFObject?, error: NSError?) -> Void in
+            //                if error != nil {
+            //                    print(error)
+            //                } else if let friendsDatabase = friendsDatabase {
+            //                    var temp = friendsDatabase["friends"] as! NSMutableArray
+            //                    temp.removeObject(byeFriend)
+            //                    friendsDatabase["friends"] = temp
+            //                    friendsDatabase.saveInBackground()
+            //
+            //                }
+            //            }
             
-            
-            
-                        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-            
-            
-                        
+            //
+            //
+            //            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            //
+            //
+            //            
         }
     }
     
