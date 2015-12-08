@@ -10,28 +10,28 @@ import UIKit
 import Parse
 
 class ForgotPasswordViewController: UIViewController {
-
+    
     @IBOutlet weak var usernameField: UITextField!
     
     @IBAction func submitButtonPressed(sender: AnyObject) {
-        var query = PFUser.query()
+        let query = PFUser.query()
         query?.whereKey("username", equalTo: usernameField.text!)
         do {
-                var user = try query?.getFirstObject() as! PFUser
-//                user.password = newPassField.text!
-                PFUser.requestPasswordResetForEmailInBackground(user.email!)
+            let user = try query?.getFirstObject() as! PFUser
+            //                user.password = newPassField.text!
+            PFUser.requestPasswordResetForEmailInBackground(user.email!)
             
-            var alert = UIAlertView(title: "Radius", message: "A reset link has been sent to your e-mail", delegate: self, cancelButtonTitle: "Ok")
+            let alert = UIAlertView(title: "Radius", message: "A reset link has been sent to your e-mail", delegate: self, cancelButtonTitle: "Ok")
             alert.show()
         } catch {
-               var alert = UIAlertView(title: "Radius", message: "Oops! Looks like this user doesn't exist", delegate: self, cancelButtonTitle: "Ok :( ")
-                alert.show()
+            let alert = UIAlertView(title: "Radius", message: "Oops! Looks like this user doesn't exist", delegate: self, cancelButtonTitle: "Ok ")
+            alert.show()
         }
         
         
     }
-//    PFUser *user = (PFUser *)[query getFirstObject];
-
+    //    PFUser *user = (PFUser *)[query getFirstObject];
+    
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
         view.endEditing(true)

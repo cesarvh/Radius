@@ -8,14 +8,16 @@
 
 import UIKit
 import Parse
+import CoreLocation
 
 class NewMessageViewController: UIViewController {
-
-    @IBOutlet weak var newMessageField: UITextField!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var newMessageField: UITextField!
     
     
-    
+    var locManager = CLLocationManager()
+    var latitude: Double = 0.0
+    var longitude: Double = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
         newMessageField.becomeFirstResponder()
@@ -28,12 +30,46 @@ class NewMessageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    @IBAction func sendButtonPressed(sender: AnyObject) {
-        
-        
+    func getLocation() {
+        locManager.requestWhenInUseAuthorization()
+        var currentLocation = CLLocation!()
+        if( CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() == CLAuthorizationStatus.Authorized){
+                currentLocation = locManager.location
+        }
+        latitude = (currentLocation.coordinate.latitude)
+        longitude = (currentLocation.coordinate.longitude)
     }
+    
+    
+    
 
+    @IBAction func sendAction(sender: AnyObject) {
+        var geoPoint: PFGeoPoint 
+        var currentUser = PFUser.currentUser()
+        var message = PFObject(className:"SentMessages")
+        message["Message"] = newMessageField.text
+        message["receiverName"] = searchBar.text
+        message["senderName"] = currentUser?.username
+        getLocation()
+        geoPoint = PFGeoPoint(latitude: latitude, longitude: longitude)
+        message["messageLocation"] = geoPoint
+        message["received"] = false
+        message.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                let alert = UIAlertView(title: "Success", message: "Message Successfully Sent", delegate: self, cancelButtonTitle: "OK")
+                alert.show()
+            } else {
+                let alert = UIAlertView(title: "Error", message: "Could Not Send Message", delegate: self, cancelButtonTitle: "OK")
+                alert.show()
+            }
+        }
+        newMessageField.text = ""
+        searchBar.text = ""
+    }
+    
+    
     /*
     // MARK: - Navigation
 

@@ -29,20 +29,23 @@ class SignUpViewController: UIViewController {
         
         var username = self.usernameTF.text
         var password = self.passwordTF.text
-        var email = self.emailTF.text
-        var finalEmail = email!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        username = username?.lowercaseString
+        password = password?.lowercaseString
+        
+        let email = self.emailTF.text
+        let finalEmail = email!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         
         // Validate the text fields
         if username?.characters.count < 5 {
-            var alert = UIAlertView(title: "Invalid", message: "Username must be greater than 5 characters", delegate: self, cancelButtonTitle: "OK")
+            let alert = UIAlertView(title: "Invalid", message: "Username must be greater than 5 characters", delegate: self, cancelButtonTitle: "OK")
             alert.show()
             
         } else if password?.characters.count < 8 {
-            var alert = UIAlertView(title: "Invalid", message: "Password must be greater than 8 characters", delegate: self, cancelButtonTitle: "OK")
+            let alert = UIAlertView(title: "Invalid", message: "Password must be greater than 8 characters", delegate: self, cancelButtonTitle: "OK")
             alert.show()
             
         } else if email?.characters.count < 8 {
-            var alert = UIAlertView(title: "Invalid", message: "Please enter a valid email address", delegate: self, cancelButtonTitle: "OK")
+            let alert = UIAlertView(title: "Invalid", message: "Please enter a valid email address", delegate: self, cancelButtonTitle: "OK")
             alert.show()
             
         } else {
@@ -51,6 +54,7 @@ class SignUpViewController: UIViewController {
             spinner.startAnimating()
             
             let newUser = PFUser()
+            
             
             newUser.username = username
             newUser.password = password
@@ -62,23 +66,22 @@ class SignUpViewController: UIViewController {
                 // Stop the spinner
                 spinner.stopAnimating()
                 if ((error) != nil) {
-                    var alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
+                    let alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
                     
                 } else {
-                    var alert = UIAlertView(title: "Success", message: "Signed Up", delegate: self, cancelButtonTitle: "OK")
+                    let alert = UIAlertView(title: "Success", message: "Signed Up", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Home") as! UIViewController
-                        self.presentViewController(viewController, animated: true, completion:nil)
-
+                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Home") 
+                        self.presentViewController(viewController, animated: true, completion: nil)
                     })
                 }
             })
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: (UIStoryboardSegue!), sender: AnyObject!) {
         if segue.identifier == "push" {
             
         }

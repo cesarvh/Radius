@@ -47,6 +47,9 @@
 		30C634671C140B090076E57F /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634661C140B090076E57F /* FriendsViewController.swift */; };
 		30F470C71C1641B1009C4147 /* global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F470C61C1641B1009C4147 /* global.swift */; };
 		30F470C91C165AFE009C4147 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F470C81C165AFE009C4147 /* ForgotPasswordViewController.swift */; };
+		30F470CB1C167BC8009C4147 /* bottomBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 30F470CA1C167BC8009C4147 /* bottomBar.png */; };
+		30F470CD1C16985F009C4147 /* SentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F470CC1C16985F009C4147 /* SentDetailViewController.swift */; };
+		30F470CF1C1699A7009C4147 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F470CE1C1699A7009C4147 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,9 @@
 		30C634661C140B090076E57F /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		30F470C61C1641B1009C4147 /* global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = global.swift; sourceTree = "<group>"; };
 		30F470C81C165AFE009C4147 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		30F470CA1C167BC8009C4147 /* bottomBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomBar.png; sourceTree = "<group>"; };
+		30F470CC1C16985F009C4147 /* SentDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentDetailViewController.swift; sourceTree = "<group>"; };
+		30F470CE1C1699A7009C4147 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +193,8 @@
 				30C633FD1C13959C0076E57F /* ViewController.swift */,
 				30F470C81C165AFE009C4147 /* ForgotPasswordViewController.swift */,
 				30C633FF1C13959C0076E57F /* Main.storyboard */,
+				30F470CE1C1699A7009C4147 /* TableViewController.swift */,
+				30F470CC1C16985F009C4147 /* SentDetailViewController.swift */,
 				303B3F2A1C155352007C3F91 /* AddNewFriendViewController.swift */,
 				30F470C61C1641B1009C4147 /* global.swift */,
 				30C634661C140B090076E57F /* FriendsViewController.swift */,
@@ -250,6 +258,7 @@
 			children = (
 				303B3F201C153A63007C3F91 /* archive.png */,
 				303B3F211C153A63007C3F91 /* friends.png */,
+				30F470CA1C167BC8009C4147 /* bottomBar.png */,
 				303B3F221C153A63007C3F91 /* newMessage.png */,
 				303B3F231C153A63007C3F91 /* sentMessages.png */,
 				303B3F241C153A63007C3F91 /* settings.png */,
@@ -367,6 +376,7 @@
 				303B3F261C153A63007C3F91 /* friends.png in Resources */,
 				303B3F271C153A63007C3F91 /* newMessage.png in Resources */,
 				303B3F281C153A63007C3F91 /* sentMessages.png in Resources */,
+				30F470CB1C167BC8009C4147 /* bottomBar.png in Resources */,
 				303B3F291C153A63007C3F91 /* settings.png in Resources */,
 				30C6342A1C139E810076E57F /* login.png in Resources */,
 				30C634061C13959C0076E57F /* LaunchScreen.storyboard in Resources */,
@@ -398,9 +408,11 @@
 			files = (
 				30C634651C140ABE0076E57F /* SentMessagesViewController.swift in Sources */,
 				30C634671C140B090076E57F /* FriendsViewController.swift in Sources */,
+				30F470CF1C1699A7009C4147 /* TableViewController.swift in Sources */,
 				30F470C91C165AFE009C4147 /* ForgotPasswordViewController.swift in Sources */,
 				30C633FE1C13959C0076E57F /* ViewController.swift in Sources */,
 				303B3F2B1C155352007C3F91 /* AddNewFriendViewController.swift in Sources */,
+				30F470CD1C16985F009C4147 /* SentDetailViewController.swift in Sources */,
 				30F470C71C1641B1009C4147 /* global.swift in Sources */,
 				30C634321C13A4B90076E57F /* NewMessageViewController.swift in Sources */,
 				30C633FC1C13959C0076E57F /* AppDelegate.swift in Sources */,

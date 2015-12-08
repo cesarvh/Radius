@@ -11,8 +11,8 @@ import Parse
 
 class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     @IBOutlet weak var friendsTableView: UITableView!
-//    var friendsArray: NSMutableArray = NSMutableArray();
-//    var friendsArray:[String] = [String]()
+    //    var friendsArray: NSMutableArray = NSMutableArray();
+    //    var friendsArray:[String] = [String]()
     
     
     override func viewDidLoad() {
@@ -27,8 +27,8 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         friendsTableView.backgroundColor = UIColor(red:0.62, green:0.83, blue:0.87, alpha:1.0)
         friendsTableView.separatorColor = UIColor(red:0.50, green:0.62, blue:0.75, alpha:1.0)
-
-
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -58,8 +58,8 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         if editingStyle == UITableViewCellEditingStyle.Delete {
             // delete the friend on UI
             // delete the friend in the parse array
-//            var query = PFUser.query()
-//            query!.whereKey("username", equalTo:username)
+            //            var query = PFUser.query()
+            //            query!.whereKey("username", equalTo:username)
             
             var byeFriend = mainInstance.friendsArray.objectAtIndex(indexPath.row)
             
@@ -90,7 +90,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
             
         }
     }
-
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -104,18 +104,15 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
-
-
-
