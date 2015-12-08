@@ -43,6 +43,20 @@ class SentDetailViewController: UIViewController {
         dropPin.title = "Message Location"
         Map.addAnnotation(dropPin)
         centerMapOnLocation(loc)
+//        
+//        senttoTF.layer.cornerRadius = 10
+//        dateLabel.layer.cornerRadius = 10
+//        message.layer.cornerRadius = 10
+        
+        senttoTF.layer.borderColor = UIColor(red:0.50, green:0.62, blue:0.75, alpha:1.0).CGColor
+        senttoTF.layer.borderWidth = 1.0;
+        
+        dateLabel.layer.borderColor = UIColor(red:0.50, green:0.62, blue:0.75, alpha:1.0).CGColor
+        dateLabel.layer.borderWidth = 1.0;
+        
+        message.layer.borderColor = UIColor(red:0.50, green:0.62, blue:0.75, alpha:1.0).CGColor
+        message.layer.borderWidth = 1.0;
+        
             //currencyCode.text = object["currencyCode"] as! String
 
         // Do any additional setup after loading the view.

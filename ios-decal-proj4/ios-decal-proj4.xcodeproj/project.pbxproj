@@ -50,6 +50,7 @@
 		30F470CB1C167BC8009C4147 /* bottomBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 30F470CA1C167BC8009C4147 /* bottomBar.png */; };
 		30F470CD1C16985F009C4147 /* SentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F470CC1C16985F009C4147 /* SentDetailViewController.swift */; };
 		30F470CF1C1699A7009C4147 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F470CE1C1699A7009C4147 /* TableViewController.swift */; };
+		30F470D31C16B74E009C4147 /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F470D21C16B74E009C4147 /* MessageDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		30F470CA1C167BC8009C4147 /* bottomBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomBar.png; sourceTree = "<group>"; };
 		30F470CC1C16985F009C4147 /* SentDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentDetailViewController.swift; sourceTree = "<group>"; };
 		30F470CE1C1699A7009C4147 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		30F470D21C16B74E009C4147 /* MessageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 				30F470C81C165AFE009C4147 /* ForgotPasswordViewController.swift */,
 				30C633FF1C13959C0076E57F /* Main.storyboard */,
 				30F470CE1C1699A7009C4147 /* TableViewController.swift */,
+				30F470D21C16B74E009C4147 /* MessageDetailViewController.swift */,
 				30F470CC1C16985F009C4147 /* SentDetailViewController.swift */,
 				303B3F2A1C155352007C3F91 /* AddNewFriendViewController.swift */,
 				30F470C61C1641B1009C4147 /* global.swift */,
@@ -417,6 +420,7 @@
 				30C634321C13A4B90076E57F /* NewMessageViewController.swift in Sources */,
 				30C633FC1C13959C0076E57F /* AppDelegate.swift in Sources */,
 				30C6345D1C13CCE00076E57F /* MessagesViewController.swift in Sources */,
+				30F470D31C16B74E009C4147 /* MessageDetailViewController.swift in Sources */,
 				30C6342C1C13A3BA0076E57F /* HomeScreenViewController.swift in Sources */,
 				30C6345F1C13D1830076E57F /* SignUpViewController.swift in Sources */,
 			);

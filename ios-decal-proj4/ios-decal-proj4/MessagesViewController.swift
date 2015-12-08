@@ -7,17 +7,19 @@
 //
 import UIKit
 import Parse
+import ParseUI
 import CoreLocation
 
 
 class MessagesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     @IBOutlet weak var messageTableView: UITableView!
-
+    
     var locManager = CLLocationManager()
     var latitude: Double = 0.0
     var longitude: Double = 0.0
     
     var messagesArray: NSMutableArray = NSMutableArray()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,15 +30,51 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
         
         //        self.messageTextField.delegate = self
         
-        self.messagesArray.addObject("hi")
-        self.messagesArray.addObject("bye")
+//        self.messagesArray.addObject("hi")
+//        self.messagesArray.addObject("bye")
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:", name:"load", object: nil)
         loadMessages()
-        for message in messagesArray {
-            print(message)
+//        for message in messagesArray {
+//            print(message)
+//        }
+        loadDataFromParse()
+        // Do any additional setup after loading the view.
+    }
+    
+    func queryForTable() -> PFQuery {
+        let query = PFQuery(className: "SentMessages")
+        //        query.orderByAscending("objectId")
+        return query
+    }
+    
+    var objectIds: NSMutableArray = [] // empty string
+    // currentObject, currentSender, currentMessage, objectID
+    var messages: NSMutableArray = []
+    var dates: NSMutableArray = []
+    var senders: NSMutableArray = []
+    
+    func loadDataFromParse() {
+        let query = PFQuery(className: "SentMessages")
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            if error == nil {
+                // The find succeeded.
+                // print("Successfully retrieved \(objects!.count) scores.")
+                // Do something with the found objects
+                for object in objects! {
+                    self.objectIds.addObject((object.objectId as String?)!)
+                    self.dates.addObject((object.createdAt )!)
+                    self.senders.addObject((object["senderName"] as! String?)!)
+                }
+                
+                for msg in self.messagesArray {
+                    self.messages.addObject(msg)
+                }
+            } else {
+                print("\(error)")
+            }
         }
         
-        // Do any additional setup after loading the view.
     }
     
     func getLocation() {
@@ -162,6 +200,80 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return messagesArray.count
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let detailScene = segue.destinationViewController as! MessageDetailViewController
+        
+        if let indexPath = self.messageTableView.indexPathForSelectedRow {
+            let row = Int(indexPath.row)
+            detailScene.objectId = (objectIds[row] as! String)
+            detailScene.currentMessage = (messages[row] as! String)
+            detailScene.currentDate = (dates[row] as! NSDate)
+            detailScene.currentSender = (senders[row] as! String)
+            
+            
+        }
+    }
+    
+    
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            // delete the friend on UI
+            // delete the friend in the parse array
+            //            var query = PFUser.query()
+            //            query!.whereKey("username", equalTo:username)
+            
+            var byeMsg = messagesArray.objectAtIndex(indexPath.row)
+            //
+            //
+            //            messagesArray.removeObjectAtIndex(indexPath.row)
+            //
+            //
+            //
+            //            var query = PFQuery(className:"SentMessages")
+            //            do {
+            //                var messagesDB = try query.findObjects()
+            //                if (var editableMessagesFromDB = messagesDB as! NSMutableArray) {
+            //
+            //                }
+            //
+            //                var i = 0
+            //                while (i != editableMessagesFromDB.count) {
+            //                    if (editableMessagesFromDB[i]["Message"] as! String == byeMsg as! String) {
+            //                        editableMessagesFromDB.removeObjectAtIndex(i)
+            //                        messagesDB = editableMessagesFromDB
+            //
+            //                    }
+            //                    return;
+            //                    i += 1
+            //                }
+            //
+            //            } catch {
+            //                print("nah")
+            //            }
+            ////
+            //            query.getObjectInBackgroundWithId((PFUser.currentUser()?.objectId)!) {
+            //                (friendsDatabase: PFObject?, error: NSError?) -> Void in
+            //                if error != nil {
+            //                    print(error)
+            //                } else if let friendsDatabase = friendsDatabase {
+            //                    var temp = friendsDatabase["friends"] as! NSMutableArray
+            //                    temp.removeObject(byeFriend)
+            //                    friendsDatabase["friends"] = temp
+            //                    friendsDatabase.saveInBackground()
+            //
+            //                }
+            //            }
+            
+            //
+            //
+            //            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            //
+            //
+            //            
+        }
     }
     
     

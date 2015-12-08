@@ -35,6 +35,12 @@ class TableViewController: PFQueryTableViewController {
         super.viewDidLoad()
         loadDataFromParse()
 
+        
+        self.tableView.backgroundColor = UIColor(red:0.62, green:0.83, blue:0.87, alpha:1.0)
+        self.tableView.separatorColor = UIColor(red:0.50, green:0.62, blue:0.75, alpha:1.0)
+        
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -86,6 +92,13 @@ class TableViewController: PFQueryTableViewController {
             let priority = object["Message"] as? String
             cell!.detailTextLabel?.text = "Priority \(priority)"
         }
+        
+        self.view.backgroundColor = UIColor(red:0.62, green:0.83, blue:0.87, alpha:1.0)
+        cell!.backgroundColor = UIColor(red:0.62, green:0.83, blue:0.87, alpha:1.0)
+        cell!.textLabel?.textColor = UIColor.whiteColor()
+        
+        tableView.backgroundColor = UIColor(red:0.62, green:0.83, blue:0.87, alpha:1.0)
+        tableView.separatorColor = UIColor(red:0.50, green:0.62, blue:0.75, alpha:1.0)
         
         return cell!
     }
