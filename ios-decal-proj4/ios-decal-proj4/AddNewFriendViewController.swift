@@ -47,33 +47,44 @@ class AddNewFriendViewController: UIViewController {
         var query = PFUser.query()
         query!.whereKey("username", equalTo:username)
         do {
-            try query?.getFirstObject()
-//                var friends = PFObject(className: "User")
-                var friends = PFUser.currentUser()
-                mainInstance.friendsArray.addObject(username)
-                NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
+//            try query?.getFirstObject()
+//                var friends = PFUser.currentUser()
+            if (mainInstance.friendsArray.containsObject(username)) {
+                let alertController = UIAlertController(title: "Error", message: "You already have this friend",
+                    preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: nil))
 
-                friends!["friends"] = mainInstance.friendsArray
-                friends!.saveInBackgroundWithBlock{
-                    (success: Bool, error: NSError?) -> Void in
-                    if (success) {
-                        print("saved!")
-                    } else {
-                        print("something went wrong :( ")
-                    }
+                self.presentViewController(alertController, animated: true, completion: nil)
+                
+            } else {
+                try query?.getFirstObject()
+                var friends = PFUser.currentUser()
+                
+                // don't add this friend
+                    mainInstance.friendsArray.addObject(username)
+                    NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
+
+                    friends!["friends"] = mainInstance.friendsArray
+                    friends!.saveInBackgroundWithBlock{
+                        (success: Bool, error: NSError?) -> Void in
+                        if (success) {
+                            print("saved!")
+                        } else {
+                            print("something went wrong :( ")
+                        }
                 }
                 
-            
-        
-            
-        } catch {
-            let alertController = UIAlertController(title: "Radius", message:
-                "This user does not exist", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: nil))
-            
-            self.presentViewController(alertController, animated: true, completion: nil)
+            }
+                
+                } catch {
+                let alertController = UIAlertController(title: "Radius", message:
+                    "This user does not exist", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: nil))
+                
+                self.presentViewController(alertController, animated: true, completion: nil)
 
 
+            }
         }
         
         
@@ -92,4 +103,4 @@ class AddNewFriendViewController: UIViewController {
     }
     */
 
-}
+
