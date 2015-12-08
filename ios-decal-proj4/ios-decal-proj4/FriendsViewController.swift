@@ -59,7 +59,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
 //            var query = PFUser.query()
 //            query!.whereKey("username", equalTo:username)
             mainInstance.friendsArray.removeObjectAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
             
             
             
