@@ -47,10 +47,10 @@ class SignUpViewController: UIViewController {
             
         } else {
             // Run a spinner to show a task in progress
-            var spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
+            let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
             spinner.startAnimating()
             
-            var newUser = PFUser()
+            let newUser = PFUser()
             
             newUser.username = username
             newUser.password = password
@@ -71,6 +71,7 @@ class SignUpViewController: UIViewController {
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Home") as! UIViewController
                         self.presentViewController(viewController, animated: true, completion:nil)
+
                     })
                 }
             })
