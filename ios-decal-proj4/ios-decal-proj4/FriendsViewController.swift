@@ -51,6 +51,20 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         // return the cell
         return cell
     }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            // delete the friend on UI
+            // delete the friend in the parse array
+//            var query = PFUser.query()
+//            query!.whereKey("username", equalTo:username)
+            mainInstance.friendsArray.removeObjectAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            
+            
+        }
+    }
 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
