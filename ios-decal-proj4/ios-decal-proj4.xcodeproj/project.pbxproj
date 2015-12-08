@@ -46,6 +46,7 @@
 		30C634651C140ABE0076E57F /* SentMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634641C140ABE0076E57F /* SentMessagesViewController.swift */; };
 		30C634671C140B090076E57F /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C634661C140B090076E57F /* FriendsViewController.swift */; };
 		30F470C71C1641B1009C4147 /* global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F470C61C1641B1009C4147 /* global.swift */; };
+		30F470C91C165AFE009C4147 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F470C81C165AFE009C4147 /* ForgotPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		30C634641C140ABE0076E57F /* SentMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SentMessagesViewController.swift; path = ../SentMessagesViewController.swift; sourceTree = "<group>"; };
 		30C634661C140B090076E57F /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		30F470C61C1641B1009C4147 /* global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = global.swift; sourceTree = "<group>"; };
+		30F470C81C165AFE009C4147 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 			children = (
 				30C633FB1C13959C0076E57F /* AppDelegate.swift */,
 				30C633FD1C13959C0076E57F /* ViewController.swift */,
+				30F470C81C165AFE009C4147 /* ForgotPasswordViewController.swift */,
 				30C633FF1C13959C0076E57F /* Main.storyboard */,
 				303B3F2A1C155352007C3F91 /* AddNewFriendViewController.swift */,
 				30F470C61C1641B1009C4147 /* global.swift */,
@@ -395,6 +398,7 @@
 			files = (
 				30C634651C140ABE0076E57F /* SentMessagesViewController.swift in Sources */,
 				30C634671C140B090076E57F /* FriendsViewController.swift in Sources */,
+				30F470C91C165AFE009C4147 /* ForgotPasswordViewController.swift in Sources */,
 				30C633FE1C13959C0076E57F /* ViewController.swift in Sources */,
 				303B3F2B1C155352007C3F91 /* AddNewFriendViewController.swift in Sources */,
 				30F470C71C1641B1009C4147 /* global.swift in Sources */,
