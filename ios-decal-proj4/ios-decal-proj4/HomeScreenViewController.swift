@@ -10,6 +10,7 @@ import UIKit
 import MessageUI
 import MapKit
 import CoreLocation
+import Parse
 
 class HomeScreenViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
     @IBOutlet weak var bottomNavBar: UINavigationBar!
@@ -24,18 +25,30 @@ class HomeScreenViewController: UIViewController, MKMapViewDelegate, CLLocationM
         self.locationmanager.requestWhenInUseAuthorization()
         self.locationmanager.startUpdatingLocation()
         self.navigationController!.navigationBar.barTintColor = UIColor(red:0.81, green:0.92, blue:0.93, alpha:1.0)
-        
-        
-
-    
-
-
-        
-
         self.Map.showsUserLocation = true
+        
+        loadFriends()
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    func loadFriends() {
+        
+        var query = PFQuery(className:"_User")
+        query.getObjectInBackgroundWithId((PFUser.currentUser()?.objectId)!) {
+            (parsedFriends: PFObject?, error: NSError?) -> Void in
+            if error == nil && parsedFriends != nil {
+                var friendsDatabase = parsedFriends!["friends"] as! NSMutableArray
+                for friend in friendsDatabase {
+                    mainInstance.friendsArray.addObject(friend)
+                }
+                
+            } else {
+                print(error)
+            }
+        }
+   
     }
     
     override func didReceiveMemoryWarning() {

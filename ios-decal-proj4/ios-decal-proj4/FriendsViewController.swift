@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     @IBOutlet weak var friendsTableView: UITableView!
@@ -20,11 +21,12 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.friendsTableView.delegate = self
         self.friendsTableView.dataSource = self
         
-        mainInstance.friendsArray.addObject("kelly")
-        mainInstance.friendsArray.addObject("nag")
-        mainInstance.friendsArray.addObject("olivia")
+        
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:",name:"load", object: nil)
-
+        
+        friendsTableView.backgroundColor = UIColor(red:0.62, green:0.83, blue:0.87, alpha:1.0)
+        friendsTableView.separatorColor = UIColor(red:0.50, green:0.62, blue:0.75, alpha:1.0)
 
 
         // Do any additional setup after loading the view.
@@ -58,7 +60,30 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
             // delete the friend in the parse array
 //            var query = PFUser.query()
 //            query!.whereKey("username", equalTo:username)
+            
+            var byeFriend = mainInstance.friendsArray.objectAtIndex(indexPath.row)
+            
+            
             mainInstance.friendsArray.removeObjectAtIndex(indexPath.row)
+            
+            
+            
+            var query = PFQuery(className:"_User")
+            query.getObjectInBackgroundWithId((PFUser.currentUser()?.objectId)!) {
+                (friendsDatabase: PFObject?, error: NSError?) -> Void in
+                if error != nil {
+                    print(error)
+                } else if let friendsDatabase = friendsDatabase {
+                    var temp = friendsDatabase["friends"] as! NSMutableArray
+                    temp.removeObject(byeFriend)
+                    friendsDatabase["friends"] = temp
+                    friendsDatabase.saveInBackground()
+                    
+                }
+            }
+            
+            
+            
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
             
             
