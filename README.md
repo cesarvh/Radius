@@ -1,8 +1,11 @@
 <h1> Radius </h1>
 <h2> Authors: </h2>
-- Cesar Villalobos
-- Kelly Hong
-- Naga Alluri
+- Dev: 
+	- Cesar Villalobos
+	- Kelly Hong
+	- Naga Alluri
+- UI Design:
+	- Nikita Jain
 
 <h2> Purpose:  </h2>
 Radius is an application that aims to connect friends in a fun new way. Type a message, select friends, and drop! They will “pick up” the note when they are nearby the place you left it!
